@@ -1,0 +1,168 @@
+{
+  "letter": "E",
+  "lowercase": "e",
+  "color": "#E8B23A",
+  "backgroundColor": "#FFFDE7",
+  "letterAudio": "/audio/letters/names/e.mp3",
+  "characterSpeech": {
+    "intro": "/audio/speech/e/intro.mp3",
+    "touchPrompt": "/audio/speech/e/touch-prompt.mp3",
+    "celebration": "/audio/speech/e/celebration.mp3",
+    "lowercaseIntro": "/audio/speech/e/lowercase-intro.mp3"
+  },
+  "words": [
+    {
+      "word": "Egg",
+      "image": "/images/things/egg.png",
+      "audio": "/audio/words/egg.mp3"
+    }
+  ],
+  "song": {
+    "lyrics": "E is for Egg! E, E, E! Let's learn the letter E!",
+    "audio": "/audio/songs/e-song.mp3",
+    "lyricsLines": [
+      {
+        "line": "E is for ___",
+        "blankWord": "Egg",
+        "choices": [
+          "Egg",
+          "Bread",
+          "Candy"
+        ],
+        "timestamp": 2.5
+      },
+      {
+        "line": "Letter E, let's all ___",
+        "blankWord": "sing",
+        "choices": [
+          "sing",
+          "cry",
+          "sleep"
+        ],
+        "timestamp": 6
+      }
+    ]
+  },
+  "tracing": {
+    "uppercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320,
+      "transformImage": "/images/things/egg.png"
+    },
+    "lowercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320
+    }
+  },
+  "games": {
+    "memory_cards": {
+      "pairs": [
+        {
+          "word": "Egg",
+          "image": "/images/things/egg.png",
+          "audio": "/audio/words/egg.mp3"
+        },
+        {
+          "word": "Bread",
+          "image": "/images/actions/eat-bread.jpg",
+          "audio": "/audio/words/bread.mp3"
+        },
+        {
+          "word": "Candy",
+          "image": "/images/things/candy.png",
+          "audio": "/audio/words/candy.mp3"
+        }
+      ]
+    },
+    "letter_puzzle": {
+      "svgPath": "",
+      "pieces": 4
+    },
+    "feed_character": {
+      "correctItems": [
+        {
+          "word": "Egg",
+          "image": "/images/things/egg.png",
+          "audio": "/audio/words/egg.mp3"
+        }
+      ]
+    },
+    "build_word": {
+      "words": [
+        {
+          "word": "EGG",
+          "image": "/images/things/egg.png",
+          "audio": "/audio/words/egg.mp3",
+          "extraLetters": [
+            "B",
+            "C",
+            "D",
+            "F"
+          ]
+        }
+      ]
+    },
+    "match_picture": {
+      "rounds": [
+        {
+          "letter": "E",
+          "correctImage": "/images/things/egg.png",
+          "correctWord": "Egg"
+        }
+      ]
+    }
+  },
+  "distractors": [
+    {
+      "id": "bread",
+      "word": "Bread",
+      "image": "/images/actions/eat-bread.jpg"
+    },
+    {
+      "id": "candy",
+      "word": "Candy",
+      "image": "/images/things/candy.png"
+    },
+    {
+      "id": "chocolate",
+      "word": "Chocolate",
+      "image": "/images/things/chocolate.png"
+    },
+    {
+      "id": "tomato",
+      "word": "Tomato",
+      "image": "/images/things/tomato.png"
+    },
+    {
+      "id": "salt",
+      "word": "Salt",
+      "image": "/images/things/salt.png"
+    }
+  ],
+  "rewards": [
+    {
+      "id": "candy",
+      "type": "food",
+      "name": "Candy",
+      "image": "/images/things/candy.png",
+      "sound": "/audio/feedback/rewards/crunch.mp3",
+      "characterState": "nom_nom"
+    },
+    {
+      "id": "car",
+      "type": "toy",
+      "name": "Toy Car",
+      "image": "/images/things/car.png",
+      "sound": "/audio/feedback/rewards/vroom.mp3",
+      "characterState": "excited"
+    },
+    {
+      "id": "ice_cream",
+      "type": "food",
+      "name": "Ice Cream",
+      "image": "/images/things/icecream.png",
+      "sound": "/audio/feedback/rewards/slurp.mp3",
+      "characterState": "nom_nom"
+    }
+  ]
+}

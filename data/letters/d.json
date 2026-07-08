@@ -1,0 +1,194 @@
+{
+  "letter": "D",
+  "lowercase": "d",
+  "color": "#96CEB4",
+  "backgroundColor": "#F0F9F4",
+  "letterAudio": "/audio/letters/names/d.mp3",
+  "characterSpeech": {
+    "intro": "/audio/speech/d/intro.mp3",
+    "touchPrompt": "/audio/speech/d/touch-prompt.mp3",
+    "celebration": "/audio/speech/d/celebration.mp3",
+    "lowercaseIntro": "/audio/speech/d/lowercase-intro.mp3"
+  },
+  "words": [
+    {
+      "word": "Dog",
+      "image": "/images/things/dog.png",
+      "audio": "/audio/words/dog.mp3"
+    },
+    {
+      "word": "Door",
+      "image": "/images/things/door.png",
+      "audio": "/audio/words/door.mp3"
+    }
+  ],
+  "song": {
+    "lyrics": "D is for Dog! D, D, D! Let's learn the letter D!",
+    "audio": "/audio/songs/d-song.mp3",
+    "lyricsLines": [
+      {
+        "line": "D is for ___",
+        "blankWord": "Dog",
+        "choices": [
+          "Candy",
+          "Dog",
+          "Bread"
+        ],
+        "timestamp": 2.5
+      },
+      {
+        "line": "Letter D, let's all ___",
+        "blankWord": "sing",
+        "choices": [
+          "sing",
+          "cry",
+          "sleep"
+        ],
+        "timestamp": 6
+      }
+    ]
+  },
+  "tracing": {
+    "uppercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320,
+      "transformImage": "/images/things/dog.png"
+    },
+    "lowercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320
+    }
+  },
+  "games": {
+    "memory_cards": {
+      "pairs": [
+        {
+          "word": "Dog",
+          "image": "/images/things/dog.png",
+          "audio": "/audio/words/dog.mp3"
+        },
+        {
+          "word": "Door",
+          "image": "/images/things/door.png",
+          "audio": "/audio/words/door.mp3"
+        },
+        {
+          "word": "Bread",
+          "image": "/images/actions/eat-bread.jpg",
+          "audio": "/audio/words/bread.mp3"
+        }
+      ]
+    },
+    "letter_puzzle": {
+      "svgPath": "",
+      "pieces": 4
+    },
+    "feed_character": {
+      "correctItems": [
+        {
+          "word": "Dog",
+          "image": "/images/things/dog.png",
+          "audio": "/audio/words/dog.mp3"
+        },
+        {
+          "word": "Door",
+          "image": "/images/things/door.png",
+          "audio": "/audio/words/door.mp3"
+        }
+      ]
+    },
+    "build_word": {
+      "words": [
+        {
+          "word": "DOG",
+          "image": "/images/things/dog.png",
+          "audio": "/audio/words/dog.mp3",
+          "extraLetters": [
+            "B",
+            "C",
+            "F",
+            "M"
+          ]
+        },
+        {
+          "word": "DOOR",
+          "image": "/images/things/door.png",
+          "audio": "/audio/words/door.mp3",
+          "extraLetters": [
+            "B",
+            "C",
+            "F",
+            "M"
+          ]
+        }
+      ]
+    },
+    "match_picture": {
+      "rounds": [
+        {
+          "letter": "D",
+          "correctImage": "/images/things/dog.png",
+          "correctWord": "Dog"
+        },
+        {
+          "letter": "D",
+          "correctImage": "/images/things/door.png",
+          "correctWord": "Door"
+        }
+      ]
+    }
+  },
+  "distractors": [
+    {
+      "id": "bread",
+      "word": "Bread",
+      "image": "/images/actions/eat-bread.jpg"
+    },
+    {
+      "id": "candy",
+      "word": "Candy",
+      "image": "/images/things/candy.png"
+    },
+    {
+      "id": "chocolate",
+      "word": "Chocolate",
+      "image": "/images/things/chocolate.png"
+    },
+    {
+      "id": "tomato",
+      "word": "Tomato",
+      "image": "/images/things/tomato.png"
+    },
+    {
+      "id": "salt",
+      "word": "Salt",
+      "image": "/images/things/salt.png"
+    }
+  ],
+  "rewards": [
+    {
+      "id": "candy",
+      "type": "food",
+      "name": "Candy",
+      "image": "/images/things/candy.png",
+      "sound": "/audio/feedback/rewards/crunch.mp3",
+      "characterState": "nom_nom"
+    },
+    {
+      "id": "car",
+      "type": "toy",
+      "name": "Toy Car",
+      "image": "/images/things/car.png",
+      "sound": "/audio/feedback/rewards/vroom.mp3",
+      "characterState": "excited"
+    },
+    {
+      "id": "ice_cream",
+      "type": "food",
+      "name": "Ice Cream",
+      "image": "/images/things/icecream.png",
+      "sound": "/audio/feedback/rewards/slurp.mp3",
+      "characterState": "nom_nom"
+    }
+  ]
+}

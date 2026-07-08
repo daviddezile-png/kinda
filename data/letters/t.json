@@ -1,0 +1,209 @@
+{
+  "letter": "T",
+  "lowercase": "t",
+  "color": "#66BB6A",
+  "backgroundColor": "#E8F5E9",
+  "letterAudio": "/audio/letters/names/t.mp3",
+  "characterSpeech": {
+    "intro": "/audio/speech/t/intro.mp3",
+    "touchPrompt": "/audio/speech/t/touch-prompt.mp3",
+    "celebration": "/audio/speech/t/celebration.mp3",
+    "lowercaseIntro": "/audio/speech/t/lowercase-intro.mp3"
+  },
+  "words": [
+    {
+      "word": "Tree",
+      "image": "/images/things/tree.png",
+      "audio": "/audio/words/tree.mp3"
+    },
+    {
+      "word": "Table",
+      "image": "/images/things/table.png",
+      "audio": "/audio/words/table.mp3"
+    },
+    {
+      "word": "Tomato",
+      "image": "/images/things/tomato.png",
+      "audio": "/audio/words/tomato.mp3"
+    }
+  ],
+  "song": {
+    "lyrics": "T is for Tree! T, T, T! Let's learn the letter T!",
+    "audio": "/audio/songs/t-song.mp3",
+    "lyricsLines": [
+      {
+        "line": "T is for ___",
+        "blankWord": "Tree",
+        "choices": [
+          "Tree",
+          "Bread",
+          "Candy"
+        ],
+        "timestamp": 2.5
+      },
+      {
+        "line": "Letter T, let's all ___",
+        "blankWord": "sing",
+        "choices": [
+          "sing",
+          "cry",
+          "sleep"
+        ],
+        "timestamp": 6
+      }
+    ]
+  },
+  "tracing": {
+    "uppercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320,
+      "transformImage": "/images/things/tree.png"
+    },
+    "lowercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320
+    }
+  },
+  "games": {
+    "memory_cards": {
+      "pairs": [
+        {
+          "word": "Tree",
+          "image": "/images/things/tree.png",
+          "audio": "/audio/words/tree.mp3"
+        },
+        {
+          "word": "Table",
+          "image": "/images/things/table.png",
+          "audio": "/audio/words/table.mp3"
+        },
+        {
+          "word": "Tomato",
+          "image": "/images/things/tomato.png",
+          "audio": "/audio/words/tomato.mp3"
+        }
+      ]
+    },
+    "letter_puzzle": {
+      "svgPath": "",
+      "pieces": 4
+    },
+    "feed_character": {
+      "correctItems": [
+        {
+          "word": "Tree",
+          "image": "/images/things/tree.png",
+          "audio": "/audio/words/tree.mp3"
+        },
+        {
+          "word": "Table",
+          "image": "/images/things/table.png",
+          "audio": "/audio/words/table.mp3"
+        },
+        {
+          "word": "Tomato",
+          "image": "/images/things/tomato.png",
+          "audio": "/audio/words/tomato.mp3"
+        }
+      ]
+    },
+    "build_word": {
+      "words": [
+        {
+          "word": "TREE",
+          "image": "/images/things/tree.png",
+          "audio": "/audio/words/tree.mp3",
+          "extraLetters": [
+            "B",
+            "C",
+            "D",
+            "F"
+          ]
+        },
+        {
+          "word": "TABLE",
+          "image": "/images/things/table.png",
+          "audio": "/audio/words/table.mp3",
+          "extraLetters": [
+            "B",
+            "C",
+            "D",
+            "F"
+          ]
+        }
+      ]
+    },
+    "match_picture": {
+      "rounds": [
+        {
+          "letter": "T",
+          "correctImage": "/images/things/tree.png",
+          "correctWord": "Tree"
+        },
+        {
+          "letter": "T",
+          "correctImage": "/images/things/table.png",
+          "correctWord": "Table"
+        },
+        {
+          "letter": "T",
+          "correctImage": "/images/things/tomato.png",
+          "correctWord": "Tomato"
+        }
+      ]
+    }
+  },
+  "distractors": [
+    {
+      "id": "bread",
+      "word": "Bread",
+      "image": "/images/actions/eat-bread.jpg"
+    },
+    {
+      "id": "candy",
+      "word": "Candy",
+      "image": "/images/things/candy.png"
+    },
+    {
+      "id": "chocolate",
+      "word": "Chocolate",
+      "image": "/images/things/chocolate.png"
+    },
+    {
+      "id": "salt",
+      "word": "Salt",
+      "image": "/images/things/salt.png"
+    },
+    {
+      "id": "yolk",
+      "word": "Yolk",
+      "image": "/images/things/yolk.png"
+    }
+  ],
+  "rewards": [
+    {
+      "id": "candy",
+      "type": "food",
+      "name": "Candy",
+      "image": "/images/things/candy.png",
+      "sound": "/audio/feedback/rewards/crunch.mp3",
+      "characterState": "nom_nom"
+    },
+    {
+      "id": "car",
+      "type": "toy",
+      "name": "Toy Car",
+      "image": "/images/things/car.png",
+      "sound": "/audio/feedback/rewards/vroom.mp3",
+      "characterState": "excited"
+    },
+    {
+      "id": "ice_cream",
+      "type": "food",
+      "name": "Ice Cream",
+      "image": "/images/things/icecream.png",
+      "sound": "/audio/feedback/rewards/slurp.mp3",
+      "characterState": "nom_nom"
+    }
+  ]
+}

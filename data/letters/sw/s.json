@@ -1,0 +1,178 @@
+{
+  "letter": "S",
+  "lowercase": "s",
+  "color": "#E8A90C",
+  "backgroundColor": "#FFF8E1",
+  "letterAudio": "/audio/sw/letters/s/letter-s.mp3",
+  "characterSpeech": {
+    "intro": "/audio/sw/speech/s/intro.mp3",
+    "touchPrompt": "/audio/sw/speech/s/touch-prompt.mp3",
+    "celebration": "/audio/sw/speech/s/celebration.mp3",
+    "lowercaseIntro": "/audio/sw/speech/s/lowercase-intro.mp3"
+  },
+  "words": [
+    {
+      "word": "Samaki",
+      "image": "/images/things/fish.png",
+      "audio": "/audio/sw/letters/s/samaki.mp3"
+    },
+    {
+      "word": "Saa",
+      "image": "",
+      "audio": "/audio/sw/letters/s/saa.mp3"
+    },
+    {
+      "word": "Simba",
+      "image": "",
+      "audio": "/audio/sw/letters/s/simba.mp3"
+    }
+  ],
+  "song": {
+    "lyrics": "S ni ya Samaki! S, S, S! Tujifunze herufi S!",
+    "audio": "/audio/sw/songs/s-song.mp3",
+    "lyricsLines": [
+      {
+        "line": "S ni ya ___",
+        "blankWord": "Samaki",
+        "choices": [
+          "Samaki",
+          "Nyanya",
+          "Chumvi"
+        ],
+        "timestamp": 2.5
+      },
+      {
+        "line": "Herufi S, tuimbe ___",
+        "blankWord": "pamoja",
+        "choices": [
+          "pamoja",
+          "peke",
+          "kimya"
+        ],
+        "timestamp": 6
+      }
+    ]
+  },
+  "tracing": {
+    "uppercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320,
+      "transformImage": "/images/things/fish.png"
+    },
+    "lowercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320
+    }
+  },
+  "games": {
+    "memory_cards": {
+      "pairs": [
+        {
+          "word": "Samaki",
+          "image": "/images/things/fish.png",
+          "audio": "/audio/sw/letters/s/samaki.mp3"
+        },
+        {
+          "word": "Nyanya",
+          "image": "/images/things/tomato.png",
+          "audio": "/audio/sw/words/nyanya.mp3"
+        },
+        {
+          "word": "Chumvi",
+          "image": "/images/things/salt.png",
+          "audio": "/audio/sw/words/chumvi.mp3"
+        }
+      ]
+    },
+    "letter_puzzle": {
+      "svgPath": "",
+      "pieces": 4
+    },
+    "feed_character": {
+      "correctItems": [
+        {
+          "word": "Samaki",
+          "image": "/images/things/fish.png",
+          "audio": "/audio/sw/letters/s/samaki.mp3"
+        }
+      ]
+    },
+    "build_word": {
+      "words": [
+        {
+          "word": "SAMAKI",
+          "image": "/images/things/fish.png",
+          "audio": "/audio/sw/letters/s/samaki.mp3",
+          "extraLetters": [
+            "B",
+            "K",
+            "M",
+            "T"
+          ]
+        }
+      ]
+    },
+    "match_picture": {
+      "rounds": [
+        {
+          "letter": "S",
+          "correctImage": "/images/things/fish.png",
+          "correctWord": "Samaki"
+        }
+      ]
+    }
+  },
+  "distractors": [
+    {
+      "id": "nyanya",
+      "word": "Nyanya",
+      "image": "/images/things/tomato.png"
+    },
+    {
+      "id": "chumvi",
+      "word": "Chumvi",
+      "image": "/images/things/salt.png"
+    },
+    {
+      "id": "kijiko",
+      "word": "Kijiko",
+      "image": "/images/things/spoon.png"
+    },
+    {
+      "id": "kofia",
+      "word": "Kofia",
+      "image": "/images/things/hat.png"
+    },
+    {
+      "id": "kiatu",
+      "word": "Kiatu",
+      "image": "/images/things/shoe.png"
+    }
+  ],
+  "rewards": [
+    {
+      "id": "candy",
+      "type": "food",
+      "name": "Peremende",
+      "image": "/images/things/candy.png",
+      "sound": "/audio/rewards/crunch.mp3",
+      "characterState": "nom_nom"
+    },
+    {
+      "id": "car",
+      "type": "toy",
+      "name": "Gari",
+      "image": "/images/things/car.png",
+      "sound": "/audio/rewards/vroom.mp3",
+      "characterState": "excited"
+    },
+    {
+      "id": "ice_cream",
+      "type": "food",
+      "name": "Aiskrimu",
+      "image": "/images/things/icecream.png",
+      "sound": "/audio/rewards/slurp.mp3",
+      "characterState": "nom_nom"
+    }
+  ]
+}

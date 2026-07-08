@@ -1,0 +1,194 @@
+{
+  "letter": "J",
+  "lowercase": "j",
+  "color": "#E59866",
+  "backgroundColor": "#FEF9E7",
+  "letterAudio": "/audio/letters/names/j.mp3",
+  "characterSpeech": {
+    "intro": "/audio/speech/j/intro.mp3",
+    "touchPrompt": "/audio/speech/j/touch-prompt.mp3",
+    "celebration": "/audio/speech/j/celebration.mp3",
+    "lowercaseIntro": "/audio/speech/j/lowercase-intro.mp3"
+  },
+  "words": [
+    {
+      "word": "Juice",
+      "image": "/images/things/juice.png",
+      "audio": "/audio/words/juice.mp3"
+    },
+    {
+      "word": "Jacket",
+      "image": "/images/things/jacket.png",
+      "audio": "/audio/words/jacket.mp3"
+    }
+  ],
+  "song": {
+    "lyrics": "J is for Juice! J, J, J! Let's learn the letter J!",
+    "audio": "/audio/songs/j-song.mp3",
+    "lyricsLines": [
+      {
+        "line": "J is for ___",
+        "blankWord": "Juice",
+        "choices": [
+          "Candy",
+          "Juice",
+          "Bread"
+        ],
+        "timestamp": 2.5
+      },
+      {
+        "line": "Letter J, let's all ___",
+        "blankWord": "sing",
+        "choices": [
+          "sing",
+          "cry",
+          "sleep"
+        ],
+        "timestamp": 6
+      }
+    ]
+  },
+  "tracing": {
+    "uppercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320,
+      "transformImage": "/images/things/juice.png"
+    },
+    "lowercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320
+    }
+  },
+  "games": {
+    "memory_cards": {
+      "pairs": [
+        {
+          "word": "Juice",
+          "image": "/images/things/juice.png",
+          "audio": "/audio/words/juice.mp3"
+        },
+        {
+          "word": "Jacket",
+          "image": "/images/things/jacket.png",
+          "audio": "/audio/words/jacket.mp3"
+        },
+        {
+          "word": "Bread",
+          "image": "/images/actions/eat-bread.jpg",
+          "audio": "/audio/words/bread.mp3"
+        }
+      ]
+    },
+    "letter_puzzle": {
+      "svgPath": "",
+      "pieces": 4
+    },
+    "feed_character": {
+      "correctItems": [
+        {
+          "word": "Juice",
+          "image": "/images/things/juice.png",
+          "audio": "/audio/words/juice.mp3"
+        },
+        {
+          "word": "Jacket",
+          "image": "/images/things/jacket.png",
+          "audio": "/audio/words/jacket.mp3"
+        }
+      ]
+    },
+    "build_word": {
+      "words": [
+        {
+          "word": "JUICE",
+          "image": "/images/things/juice.png",
+          "audio": "/audio/words/juice.mp3",
+          "extraLetters": [
+            "B",
+            "C",
+            "D",
+            "F"
+          ]
+        },
+        {
+          "word": "JACKET",
+          "image": "/images/things/jacket.png",
+          "audio": "/audio/words/jacket.mp3",
+          "extraLetters": [
+            "B",
+            "C",
+            "D",
+            "F"
+          ]
+        }
+      ]
+    },
+    "match_picture": {
+      "rounds": [
+        {
+          "letter": "J",
+          "correctImage": "/images/things/juice.png",
+          "correctWord": "Juice"
+        },
+        {
+          "letter": "J",
+          "correctImage": "/images/things/jacket.png",
+          "correctWord": "Jacket"
+        }
+      ]
+    }
+  },
+  "distractors": [
+    {
+      "id": "bread",
+      "word": "Bread",
+      "image": "/images/actions/eat-bread.jpg"
+    },
+    {
+      "id": "candy",
+      "word": "Candy",
+      "image": "/images/things/candy.png"
+    },
+    {
+      "id": "chocolate",
+      "word": "Chocolate",
+      "image": "/images/things/chocolate.png"
+    },
+    {
+      "id": "tomato",
+      "word": "Tomato",
+      "image": "/images/things/tomato.png"
+    },
+    {
+      "id": "salt",
+      "word": "Salt",
+      "image": "/images/things/salt.png"
+    }
+  ],
+  "rewards": [
+    {
+      "id": "candy",
+      "type": "food",
+      "name": "Candy",
+      "image": "/images/things/candy.png",
+      "sound": "/audio/feedback/rewards/crunch.mp3",
+      "characterState": "nom_nom"
+    },
+    {
+      "id": "car",
+      "type": "toy",
+      "name": "Toy Car",
+      "image": "/images/things/car.png",
+      "sound": "/audio/feedback/rewards/vroom.mp3",
+      "characterState": "excited"
+    },
+    {
+      "id": "ice_cream",
+      "type": "food",
+      "name": "Ice Cream",
+      "image": "/images/things/icecream.png",
+      "sound": "/audio/feedback/rewards/slurp.mp3",
+      "characterState": "nom_nom"
+    }
+  ]
+}

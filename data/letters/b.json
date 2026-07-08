@@ -1,0 +1,209 @@
+{
+  "letter": "B",
+  "lowercase": "b",
+  "color": "#4ECDC4",
+  "backgroundColor": "#E8F8F7",
+  "letterAudio": "/audio/letters/names/b.mp3",
+  "characterSpeech": {
+    "intro": "/audio/speech/b/intro.mp3",
+    "touchPrompt": "/audio/speech/b/touch-prompt.mp3",
+    "celebration": "/audio/speech/b/celebration.mp3",
+    "lowercaseIntro": "/audio/speech/b/lowercase-intro.mp3"
+  },
+  "words": [
+    {
+      "word": "Ball",
+      "image": "/images/things/ball.png",
+      "audio": "/audio/words/ball.mp3"
+    },
+    {
+      "word": "Banana",
+      "image": "/images/things/banana.png",
+      "audio": "/audio/words/banana.mp3"
+    },
+    {
+      "word": "Bird",
+      "image": "/images/things/bird.png",
+      "audio": "/audio/words/bird.mp3"
+    }
+  ],
+  "song": {
+    "lyrics": "B is for Ball! B, B, B! Let's learn the letter B!",
+    "audio": "/audio/songs/b-song.mp3",
+    "lyricsLines": [
+      {
+        "line": "B is for ___",
+        "blankWord": "Ball",
+        "choices": [
+          "Ball",
+          "Candy",
+          "Chocolate"
+        ],
+        "timestamp": 2.5
+      },
+      {
+        "line": "Letter B, let's all ___",
+        "blankWord": "sing",
+        "choices": [
+          "sing",
+          "cry",
+          "sleep"
+        ],
+        "timestamp": 6
+      }
+    ]
+  },
+  "tracing": {
+    "uppercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320,
+      "transformImage": "/images/things/ball.png"
+    },
+    "lowercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320
+    }
+  },
+  "games": {
+    "memory_cards": {
+      "pairs": [
+        {
+          "word": "Ball",
+          "image": "/images/things/ball.png",
+          "audio": "/audio/words/ball.mp3"
+        },
+        {
+          "word": "Banana",
+          "image": "/images/things/banana.png",
+          "audio": "/audio/words/banana.mp3"
+        },
+        {
+          "word": "Bird",
+          "image": "/images/things/bird.png",
+          "audio": "/audio/words/bird.mp3"
+        }
+      ]
+    },
+    "letter_puzzle": {
+      "svgPath": "",
+      "pieces": 4
+    },
+    "feed_character": {
+      "correctItems": [
+        {
+          "word": "Ball",
+          "image": "/images/things/ball.png",
+          "audio": "/audio/words/ball.mp3"
+        },
+        {
+          "word": "Banana",
+          "image": "/images/things/banana.png",
+          "audio": "/audio/words/banana.mp3"
+        },
+        {
+          "word": "Bird",
+          "image": "/images/things/bird.png",
+          "audio": "/audio/words/bird.mp3"
+        }
+      ]
+    },
+    "build_word": {
+      "words": [
+        {
+          "word": "BALL",
+          "image": "/images/things/ball.png",
+          "audio": "/audio/words/ball.mp3",
+          "extraLetters": [
+            "C",
+            "D",
+            "F",
+            "M"
+          ]
+        },
+        {
+          "word": "BANANA",
+          "image": "/images/things/banana.png",
+          "audio": "/audio/words/banana.mp3",
+          "extraLetters": [
+            "C",
+            "D",
+            "F",
+            "M"
+          ]
+        }
+      ]
+    },
+    "match_picture": {
+      "rounds": [
+        {
+          "letter": "B",
+          "correctImage": "/images/things/ball.png",
+          "correctWord": "Ball"
+        },
+        {
+          "letter": "B",
+          "correctImage": "/images/things/banana.png",
+          "correctWord": "Banana"
+        },
+        {
+          "letter": "B",
+          "correctImage": "/images/things/bird.png",
+          "correctWord": "Bird"
+        }
+      ]
+    }
+  },
+  "distractors": [
+    {
+      "id": "candy",
+      "word": "Candy",
+      "image": "/images/things/candy.png"
+    },
+    {
+      "id": "chocolate",
+      "word": "Chocolate",
+      "image": "/images/things/chocolate.png"
+    },
+    {
+      "id": "tomato",
+      "word": "Tomato",
+      "image": "/images/things/tomato.png"
+    },
+    {
+      "id": "salt",
+      "word": "Salt",
+      "image": "/images/things/salt.png"
+    },
+    {
+      "id": "yolk",
+      "word": "Yolk",
+      "image": "/images/things/yolk.png"
+    }
+  ],
+  "rewards": [
+    {
+      "id": "candy",
+      "type": "food",
+      "name": "Candy",
+      "image": "/images/things/candy.png",
+      "sound": "/audio/feedback/rewards/crunch.mp3",
+      "characterState": "nom_nom"
+    },
+    {
+      "id": "car",
+      "type": "toy",
+      "name": "Toy Car",
+      "image": "/images/things/car.png",
+      "sound": "/audio/feedback/rewards/vroom.mp3",
+      "characterState": "excited"
+    },
+    {
+      "id": "ice_cream",
+      "type": "food",
+      "name": "Ice Cream",
+      "image": "/images/things/icecream.png",
+      "sound": "/audio/feedback/rewards/slurp.mp3",
+      "characterState": "nom_nom"
+    }
+  ]
+}

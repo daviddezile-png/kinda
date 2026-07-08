@@ -1,0 +1,209 @@
+{
+  "letter": "C",
+  "lowercase": "c",
+  "color": "#45B7D1",
+  "backgroundColor": "#E8F4F8",
+  "letterAudio": "/audio/letters/names/c.mp3",
+  "characterSpeech": {
+    "intro": "/audio/speech/c/intro.mp3",
+    "touchPrompt": "/audio/speech/c/touch-prompt.mp3",
+    "celebration": "/audio/speech/c/celebration.mp3",
+    "lowercaseIntro": "/audio/speech/c/lowercase-intro.mp3"
+  },
+  "words": [
+    {
+      "word": "Cat",
+      "image": "/images/things/cat.png",
+      "audio": "/audio/words/cat.mp3"
+    },
+    {
+      "word": "Car",
+      "image": "/images/things/car.png",
+      "audio": "/audio/words/car.mp3"
+    },
+    {
+      "word": "Coconut",
+      "image": "/images/things/coconut.png",
+      "audio": "/audio/words/coconut.mp3"
+    }
+  ],
+  "song": {
+    "lyrics": "C is for Cat! C, C, C! Let's learn the letter C!",
+    "audio": "/audio/songs/c-song.mp3",
+    "lyricsLines": [
+      {
+        "line": "C is for ___",
+        "blankWord": "Cat",
+        "choices": [
+          "Bread",
+          "Tomato",
+          "Cat"
+        ],
+        "timestamp": 2.5
+      },
+      {
+        "line": "Letter C, let's all ___",
+        "blankWord": "sing",
+        "choices": [
+          "sing",
+          "cry",
+          "sleep"
+        ],
+        "timestamp": 6
+      }
+    ]
+  },
+  "tracing": {
+    "uppercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320,
+      "transformImage": "/images/things/cat.png"
+    },
+    "lowercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320
+    }
+  },
+  "games": {
+    "memory_cards": {
+      "pairs": [
+        {
+          "word": "Cat",
+          "image": "/images/things/cat.png",
+          "audio": "/audio/words/cat.mp3"
+        },
+        {
+          "word": "Car",
+          "image": "/images/things/car.png",
+          "audio": "/audio/words/car.mp3"
+        },
+        {
+          "word": "Coconut",
+          "image": "/images/things/coconut.png",
+          "audio": "/audio/words/coconut.mp3"
+        }
+      ]
+    },
+    "letter_puzzle": {
+      "svgPath": "",
+      "pieces": 4
+    },
+    "feed_character": {
+      "correctItems": [
+        {
+          "word": "Cat",
+          "image": "/images/things/cat.png",
+          "audio": "/audio/words/cat.mp3"
+        },
+        {
+          "word": "Car",
+          "image": "/images/things/car.png",
+          "audio": "/audio/words/car.mp3"
+        },
+        {
+          "word": "Coconut",
+          "image": "/images/things/coconut.png",
+          "audio": "/audio/words/coconut.mp3"
+        }
+      ]
+    },
+    "build_word": {
+      "words": [
+        {
+          "word": "CAT",
+          "image": "/images/things/cat.png",
+          "audio": "/audio/words/cat.mp3",
+          "extraLetters": [
+            "B",
+            "D",
+            "F",
+            "M"
+          ]
+        },
+        {
+          "word": "CAR",
+          "image": "/images/things/car.png",
+          "audio": "/audio/words/car.mp3",
+          "extraLetters": [
+            "B",
+            "D",
+            "F",
+            "M"
+          ]
+        }
+      ]
+    },
+    "match_picture": {
+      "rounds": [
+        {
+          "letter": "C",
+          "correctImage": "/images/things/cat.png",
+          "correctWord": "Cat"
+        },
+        {
+          "letter": "C",
+          "correctImage": "/images/things/car.png",
+          "correctWord": "Car"
+        },
+        {
+          "letter": "C",
+          "correctImage": "/images/things/coconut.png",
+          "correctWord": "Coconut"
+        }
+      ]
+    }
+  },
+  "distractors": [
+    {
+      "id": "bread",
+      "word": "Bread",
+      "image": "/images/actions/eat-bread.jpg"
+    },
+    {
+      "id": "tomato",
+      "word": "Tomato",
+      "image": "/images/things/tomato.png"
+    },
+    {
+      "id": "salt",
+      "word": "Salt",
+      "image": "/images/things/salt.png"
+    },
+    {
+      "id": "yolk",
+      "word": "Yolk",
+      "image": "/images/things/yolk.png"
+    },
+    {
+      "id": "tea",
+      "word": "Tea",
+      "image": "/images/things/tea.png"
+    }
+  ],
+  "rewards": [
+    {
+      "id": "candy",
+      "type": "food",
+      "name": "Candy",
+      "image": "/images/things/candy.png",
+      "sound": "/audio/feedback/rewards/crunch.mp3",
+      "characterState": "nom_nom"
+    },
+    {
+      "id": "car",
+      "type": "toy",
+      "name": "Toy Car",
+      "image": "/images/things/car.png",
+      "sound": "/audio/feedback/rewards/vroom.mp3",
+      "characterState": "excited"
+    },
+    {
+      "id": "ice_cream",
+      "type": "food",
+      "name": "Ice Cream",
+      "image": "/images/things/icecream.png",
+      "sound": "/audio/feedback/rewards/slurp.mp3",
+      "characterState": "nom_nom"
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "letter": "F",
+  "lowercase": "f",
+  "color": "#DDA0DD",
+  "backgroundColor": "#F8F0FF",
+  "letterAudio": "/audio/sw/letters/f/letter-f.mp3",
+  "characterSpeech": {
+    "intro": "/audio/sw/speech/f/intro.mp3",
+    "touchPrompt": "/audio/sw/speech/f/touch-prompt.mp3",
+    "celebration": "/audio/sw/speech/f/celebration.mp3",
+    "lowercaseIntro": "/audio/sw/speech/f/lowercase-intro.mp3"
+  },
+  "words": [
+    {
+      "word": "Funguo",
+      "image": "/images/things/key.png",
+      "audio": "/audio/sw/letters/f/funguo.mp3"
+    },
+    {
+      "word": "Farasi",
+      "image": "",
+      "audio": "/audio/sw/letters/f/farasi.mp3"
+    },
+    {
+      "word": "Fisi",
+      "image": "",
+      "audio": "/audio/sw/letters/f/fisi.mp3"
+    }
+  ],
+  "song": {
+    "lyrics": "F ni ya Funguo! F, F, F! Tujifunze herufi F!",
+    "audio": "/audio/sw/songs/f-song.mp3",
+    "lyricsLines": [
+      {
+        "line": "F ni ya ___",
+        "blankWord": "Funguo",
+        "choices": [
+          "Funguo",
+          "Nyanya",
+          "Chumvi"
+        ],
+        "timestamp": 2.5
+      },
+      {
+        "line": "Herufi F, tuimbe ___",
+        "blankWord": "pamoja",
+        "choices": [
+          "pamoja",
+          "peke",
+          "kimya"
+        ],
+        "timestamp": 6
+      }
+    ]
+  },
+  "tracing": {
+    "uppercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320,
+      "transformImage": "/images/things/key.png"
+    },
+    "lowercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320
+    }
+  },
+  "games": {
+    "memory_cards": {
+      "pairs": [
+        {
+          "word": "Funguo",
+          "image": "/images/things/key.png",
+          "audio": "/audio/sw/letters/f/funguo.mp3"
+        },
+        {
+          "word": "Nyanya",
+          "image": "/images/things/tomato.png",
+          "audio": "/audio/sw/words/nyanya.mp3"
+        },
+        {
+          "word": "Chumvi",
+          "image": "/images/things/salt.png",
+          "audio": "/audio/sw/words/chumvi.mp3"
+        }
+      ]
+    },
+    "letter_puzzle": {
+      "svgPath": "",
+      "pieces": 4
+    },
+    "feed_character": {
+      "correctItems": [
+        {
+          "word": "Funguo",
+          "image": "/images/things/key.png",
+          "audio": "/audio/sw/letters/f/funguo.mp3"
+        }
+      ]
+    },
+    "build_word": {
+      "words": [
+        {
+          "word": "FUNGUO",
+          "image": "/images/things/key.png",
+          "audio": "/audio/sw/letters/f/funguo.mp3",
+          "extraLetters": [
+            "B",
+            "K",
+            "M",
+            "S"
+          ]
+        }
+      ]
+    },
+    "match_picture": {
+      "rounds": [
+        {
+          "letter": "F",
+          "correctImage": "/images/things/key.png",
+          "correctWord": "Funguo"
+        }
+      ]
+    }
+  },
+  "distractors": [
+    {
+      "id": "nyanya",
+      "word": "Nyanya",
+      "image": "/images/things/tomato.png"
+    },
+    {
+      "id": "chumvi",
+      "word": "Chumvi",
+      "image": "/images/things/salt.png"
+    },
+    {
+      "id": "kijiko",
+      "word": "Kijiko",
+      "image": "/images/things/spoon.png"
+    },
+    {
+      "id": "kofia",
+      "word": "Kofia",
+      "image": "/images/things/hat.png"
+    },
+    {
+      "id": "kiatu",
+      "word": "Kiatu",
+      "image": "/images/things/shoe.png"
+    }
+  ],
+  "rewards": [
+    {
+      "id": "candy",
+      "type": "food",
+      "name": "Peremende",
+      "image": "/images/things/candy.png",
+      "sound": "/audio/rewards/crunch.mp3",
+      "characterState": "nom_nom"
+    },
+    {
+      "id": "car",
+      "type": "toy",
+      "name": "Gari",
+      "image": "/images/things/car.png",
+      "sound": "/audio/rewards/vroom.mp3",
+      "characterState": "excited"
+    },
+    {
+      "id": "ice_cream",
+      "type": "food",
+      "name": "Aiskrimu",
+      "image": "/images/things/icecream.png",
+      "sound": "/audio/rewards/slurp.mp3",
+      "characterState": "nom_nom"
+    }
+  ]
+}

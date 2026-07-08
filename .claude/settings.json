@@ -1,0 +1,40 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -iE \"^\\(bcrypt|bcryptjs|idb\\)$\")",
+      "Bash(grep -iE \"^\\(bcryptjs|idb|bcrypt\\)$\")",
+      "PowerShell(npx prisma generate)",
+      "PowerShell(npx tsc --noEmit)",
+      "PowerShell(npx next build 2>&1)",
+      "PowerShell(npx prisma db push 2>&1)",
+      "PowerShell(npx tsc --noEmit 2>&1)",
+      "Bash(sed -i 's/Elimu Yangu/Kinda/g' types/index.ts prisma/schema.prisma AGENTS.md elimu-yangu-specs/elimu-yangu-specs/11-CODING-AGENT-INSTRUCTIONS.md elimu-yangu-specs/elimu-yangu-specs/09-TEACHER-ADMIN-AUTH.md elimu-yangu-specs/elimu-yangu-specs/08-REWARD-AUDIO-PWA.md)",
+      "Bash(sed -i 's/ELIMU YANGU/KINDA/g' elimu-yangu-specs/elimu-yangu-specs/00-PROJECT-OVERVIEW.md)",
+      "Bash(sed -i 's/create-next-app@latest elimu-yangu /create-next-app@latest kinda /' elimu-yangu-specs/elimu-yangu-specs/00-PROJECT-OVERVIEW.md)",
+      "Bash(sed -i 's/^cd elimu-yangu$/cd kinda/' elimu-yangu-specs/elimu-yangu-specs/00-PROJECT-OVERVIEW.md)",
+      "PowerShell(node scripts/list-sw-audio.mjs)",
+      "Bash(npm install *)",
+      "Bash(npx prisma *)",
+      "Bash(npx next *)",
+      "Bash(node -e \"const d=require\\('./public/images/character/idle.json'\\); console.log\\('valid JSON, layers:', d.layers.length, 'shapes:', d.layers[0].shapes.length, 'fr/op:', d.fr+'/'+d.op\\)\")",
+      "Bash(netstat -ano)",
+      "Bash(taskkill //PID 6792 //F)",
+      "Bash(xargs -n1 basename)",
+      "Bash(python -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('letter:',d.get\\('letter'\\),'lowercase:',d.get\\('lowercase'\\)\\); print\\('letterAudio:',d.get\\('letterAudio'\\)\\); print\\('characterSpeech:',json.dumps\\(d.get\\('characterSpeech'\\),indent=2\\)\\)\")",
+      "Bash(python generate_voices_free.py)",
+      "Bash(rm -f public/audio/letters/small/z.mp3)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(python -m pip --version)",
+      "Bash(python -c \"import rembg; print\\('rembg ok'\\)\")",
+      "Bash(curl -s -o /dev/null -w \"pollinations HTTP %{http_code}, %{size_download} bytes\\\\n\" \"https://image.pollinations.ai/prompt/a%20red%20apple?width=64&height=64&nologo=true\" --max-time 60)",
+      "Bash(python scripts/gen-3d-character.py)",
+      "Bash(echo \"started, pid $!\")",
+      "Bash(PYTHONIOENCODING=utf-8 python scripts/gen-3d-character.py)",
+      "Bash(echo \"restarted pid $!\")",
+      "Bash(grep -vi \"// \")"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\Dav~Daz\\.claude\\projects\\c--Users-Dav-Daz-kinda\\memory"
+    ]
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "letter": "W",
+  "lowercase": "w",
+  "color": "#42A5F5",
+  "backgroundColor": "#E3F2FD",
+  "letterAudio": "/audio/letters/names/w.mp3",
+  "characterSpeech": {
+    "intro": "/audio/speech/w/intro.mp3",
+    "touchPrompt": "/audio/speech/w/touch-prompt.mp3",
+    "celebration": "/audio/speech/w/celebration.mp3",
+    "lowercaseIntro": "/audio/speech/w/lowercase-intro.mp3"
+  },
+  "words": [
+    {
+      "word": "Water",
+      "image": "/images/things/water.png",
+      "audio": "/audio/words/water.mp3"
+    },
+    {
+      "word": "Watermelon",
+      "image": "/images/things/watermelon.jpg",
+      "audio": "/audio/words/watermelon.mp3"
+    },
+    {
+      "word": "Window",
+      "image": "/images/things/window.png",
+      "audio": "/audio/words/window.mp3"
+    }
+  ],
+  "song": {
+    "lyrics": "W is for Water! W, W, W! Let's learn the letter W!",
+    "audio": "/audio/songs/w-song.mp3",
+    "lyricsLines": [
+      {
+        "line": "W is for ___",
+        "blankWord": "Water",
+        "choices": [
+          "Water",
+          "Bread",
+          "Candy"
+        ],
+        "timestamp": 2.5
+      },
+      {
+        "line": "Letter W, let's all ___",
+        "blankWord": "sing",
+        "choices": [
+          "sing",
+          "cry",
+          "sleep"
+        ],
+        "timestamp": 6
+      }
+    ]
+  },
+  "tracing": {
+    "uppercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320,
+      "transformImage": "/images/things/water.png"
+    },
+    "lowercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320
+    }
+  },
+  "games": {
+    "memory_cards": {
+      "pairs": [
+        {
+          "word": "Water",
+          "image": "/images/things/water.png",
+          "audio": "/audio/words/water.mp3"
+        },
+        {
+          "word": "Watermelon",
+          "image": "/images/things/watermelon.jpg",
+          "audio": "/audio/words/watermelon.mp3"
+        },
+        {
+          "word": "Window",
+          "image": "/images/things/window.png",
+          "audio": "/audio/words/window.mp3"
+        }
+      ]
+    },
+    "letter_puzzle": {
+      "svgPath": "",
+      "pieces": 4
+    },
+    "feed_character": {
+      "correctItems": [
+        {
+          "word": "Water",
+          "image": "/images/things/water.png",
+          "audio": "/audio/words/water.mp3"
+        },
+        {
+          "word": "Watermelon",
+          "image": "/images/things/watermelon.jpg",
+          "audio": "/audio/words/watermelon.mp3"
+        },
+        {
+          "word": "Window",
+          "image": "/images/things/window.png",
+          "audio": "/audio/words/window.mp3"
+        }
+      ]
+    },
+    "build_word": {
+      "words": [
+        {
+          "word": "WATER",
+          "image": "/images/things/water.png",
+          "audio": "/audio/words/water.mp3",
+          "extraLetters": [
+            "B",
+            "C",
+            "D",
+            "F"
+          ]
+        },
+        {
+          "word": "WINDOW",
+          "image": "/images/things/window.png",
+          "audio": "/audio/words/window.mp3",
+          "extraLetters": [
+            "B",
+            "C",
+            "D",
+            "F"
+          ]
+        }
+      ]
+    },
+    "match_picture": {
+      "rounds": [
+        {
+          "letter": "W",
+          "correctImage": "/images/things/water.png",
+          "correctWord": "Water"
+        },
+        {
+          "letter": "W",
+          "correctImage": "/images/things/watermelon.jpg",
+          "correctWord": "Watermelon"
+        },
+        {
+          "letter": "W",
+          "correctImage": "/images/things/window.png",
+          "correctWord": "Window"
+        }
+      ]
+    }
+  },
+  "distractors": [
+    {
+      "id": "bread",
+      "word": "Bread",
+      "image": "/images/actions/eat-bread.jpg"
+    },
+    {
+      "id": "candy",
+      "word": "Candy",
+      "image": "/images/things/candy.png"
+    },
+    {
+      "id": "chocolate",
+      "word": "Chocolate",
+      "image": "/images/things/chocolate.png"
+    },
+    {
+      "id": "tomato",
+      "word": "Tomato",
+      "image": "/images/things/tomato.png"
+    },
+    {
+      "id": "salt",
+      "word": "Salt",
+      "image": "/images/things/salt.png"
+    }
+  ],
+  "rewards": [
+    {
+      "id": "candy",
+      "type": "food",
+      "name": "Candy",
+      "image": "/images/things/candy.png",
+      "sound": "/audio/feedback/rewards/crunch.mp3",
+      "characterState": "nom_nom"
+    },
+    {
+      "id": "car",
+      "type": "toy",
+      "name": "Toy Car",
+      "image": "/images/things/car.png",
+      "sound": "/audio/feedback/rewards/vroom.mp3",
+      "characterState": "excited"
+    },
+    {
+      "id": "ice_cream",
+      "type": "food",
+      "name": "Ice Cream",
+      "image": "/images/things/icecream.png",
+      "sound": "/audio/feedback/rewards/slurp.mp3",
+      "characterState": "nom_nom"
+    }
+  ]
+}

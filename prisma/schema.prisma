@@ -1,0 +1,269 @@
+// Kinda — Prisma schema
+// NOTE: provider is MySQL (the spec showed PostgreSQL/Supabase). See SPEC-DEVIATIONS.md.
+// Fill in your MySQL user/password in .env (DATABASE_URL), then run: npx prisma db push
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+}
+
+// ─────────────────────────────────────
+// SCHOOL
+// ─────────────────────────────────────
+model School {
+  id               String         @id @default(cuid())
+  name             String
+  email            String         @unique
+  phone            String?
+  address          String?
+  language         Language       @default(ENGLISH)
+  subscriptionEnd  DateTime?
+  subscriptionPlan Plan           @default(TRIAL)
+  trialEndsAt      DateTime?
+  isActive         Boolean        @default(true)
+  createdAt        DateTime       @default(now())
+  updatedAt        DateTime       @updatedAt
+
+  users         User[]
+  classes       Class[]
+  subscriptions Subscription[]
+}
+
+// ─────────────────────────────────────
+// USER (Admin + Teacher)
+// ─────────────────────────────────────
+model User {
+  id        String   @id @default(cuid())
+  name      String
+  email     String   @unique
+  password  String
+  role      Role
+  isActive  Boolean  @default(true) // an admin can suspend a teacher's login
+  // Null for the platform SUPER-ADMIN (manages every school); set for a teacher,
+  // who is scoped to exactly one school and can never see another's data.
+  schoolId  String?
+  school    School?  @relation(fields: [schoolId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  classes  Class[]
+  sessions Session[]
+  accounts Account[]
+
+  @@index([schoolId])
+}
+
+// ─────────────────────────────────────
+// CLASS
+// ─────────────────────────────────────
+model Class {
+  id        String   @id @default(cuid())
+  name      String
+  code      String?  @unique // short join code a student device enters to open this class
+  level     Level    @default(NURSERY)
+  archived  Boolean  @default(false) // retired class (new term/year) — kept for history
+  year      String? // e.g. "2026"
+  term      String? // e.g. "Term 1"
+  schoolId  String
+  school    School   @relation(fields: [schoolId], references: [id])
+  teacherId String?
+  teacher   User?    @relation(fields: [teacherId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  students   Student[]
+  curriculum Curriculum?
+
+  @@index([schoolId])
+  @@index([teacherId])
+}
+
+// ─────────────────────────────────────
+// CURRICULUM
+// The teacher (not the student) decides WHAT a class learns and in WHICH order.
+// `letters` is an ordered array of letter chars the class works through; `steps`
+// is the set of enabled lesson steps (1=See,2=Recognize,3=Write,4=Games).
+// `numbers` is the set of enabled numbers (1–10) for the MATH module.
+// `sequential` locks students to the order (must finish one before the next).
+// ─────────────────────────────────────
+model Curriculum {
+  id         String   @id @default(cuid())
+  classId    String   @unique
+  class      Class    @relation(fields: [classId], references: [id], onDelete: Cascade)
+  module     Module   @default(LETTERS)
+  letters    Json     // e.g. ["A","B","C"] — order matters
+  steps      Json     // e.g. [1,2,3,4]
+  numbers    Json?    // e.g. [1,2,3] — enabled numbers 1–10; null/absent = all
+  sequential Boolean  @default(true)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+// ─────────────────────────────────────
+// STUDENT
+// ─────────────────────────────────────
+model Student {
+  id        String   @id @default(cuid())
+  name      String
+  age       Int?
+  avatar    String?  // character id (animal/fruit) — see lib/characters.ts
+  level     Int      @default(1) // current learning stage 1–4, set by the teacher (see lib/curriculumShared.ts — level 0 is retired; "See & Know" is now the standalone Journey)
+  module    Module   @default(LETTERS) // what THIS child studies today (teacher-set): LETTERS or MATH (numbers)
+  classId   String
+  class     Class    @relation(fields: [classId], references: [id])
+  pin       String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  progress Progress[]
+  rewards  StudentReward[]
+
+  @@index([classId])
+}
+
+// ─────────────────────────────────────
+// PROGRESS
+// ─────────────────────────────────────
+model Progress {
+  id          String    @id @default(cuid())
+  studentId   String
+  student     Student   @relation(fields: [studentId], references: [id])
+  module      Module
+  itemId      String
+  step        Int
+  completed   Boolean   @default(false)
+  stars       Int       @default(0)
+  attempts    Int       @default(0)
+  timeSpent   Int       @default(0)
+  completedAt DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@unique([studentId, module, itemId, step])
+  @@index([studentId])
+}
+
+// ─────────────────────────────────────
+// STUDENT REWARDS
+// ─────────────────────────────────────
+model StudentReward {
+  id         String   @id @default(cuid())
+  studentId  String
+  student    Student  @relation(fields: [studentId], references: [id])
+  rewardType String
+  rewardName String
+  earnedAt   DateTime @default(now())
+
+  @@index([studentId])
+}
+
+// ─────────────────────────────────────
+// SUBSCRIPTION
+// ─────────────────────────────────────
+model Subscription {
+  id        String             @id @default(cuid())
+  schoolId  String
+  school    School             @relation(fields: [schoolId], references: [id])
+  plan      Plan
+  status    SubscriptionStatus @default(ACTIVE)
+  amount    Float
+  currency  String             @default("TZS")
+  startDate DateTime
+  endDate   DateTime
+  paidAt    DateTime?
+  method    PaymentMethod?
+  reference String?
+  createdAt DateTime           @default(now())
+
+  @@index([schoolId])
+}
+
+// ─────────────────────────────────────
+// NEXTAUTH REQUIRED MODELS
+// (token fields use @db.Text — MySQL VARCHAR(191) is too short for OAuth tokens)
+// ─────────────────────────────────────
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@index([userId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+// ─────────────────────────────────────
+// ENUMS
+// ─────────────────────────────────────
+enum Role {
+  ADMIN
+  TEACHER
+}
+
+enum Level {
+  BABY_CLASS
+  NURSERY
+  KINDERGARTEN
+}
+
+enum Module {
+  LETTERS
+  MATH
+  READING
+}
+
+enum Plan {
+  TRIAL
+  BASIC
+  STANDARD
+  PREMIUM
+}
+
+enum SubscriptionStatus {
+  ACTIVE
+  EXPIRED
+  CANCELLED
+  PENDING
+}
+
+enum PaymentMethod {
+  MPESA
+  CARD
+  BANK
+}
+
+enum Language {
+  ENGLISH
+  SWAHILI
+  BOTH
+}

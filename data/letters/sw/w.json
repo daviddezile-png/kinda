@@ -1,0 +1,177 @@
+{
+  "letter": "W",
+  "lowercase": "w",
+  "color": "#42A5F5",
+  "backgroundColor": "#E3F2FD",
+  "letterAudio": "/audio/sw/letters/w/letter-w.mp3",
+  "characterSpeech": {
+    "intro": "/audio/sw/speech/w/intro.mp3",
+    "touchPrompt": "/audio/sw/speech/w/touch-prompt.mp3",
+    "celebration": "/audio/sw/speech/w/celebration.mp3",
+    "lowercaseIntro": "/audio/sw/speech/w/lowercase-intro.mp3"
+  },
+  "words": [
+    {
+      "word": "Wimbo",
+      "image": "",
+      "audio": "/audio/sw/letters/w/wimbo.mp3"
+    },
+    {
+      "word": "Watoto",
+      "image": "",
+      "audio": "/audio/sw/letters/w/watoto.mp3"
+    },
+    {
+      "word": "Wingu",
+      "image": "",
+      "audio": "/audio/sw/letters/w/wingu.mp3"
+    }
+  ],
+  "song": {
+    "lyrics": "W ni ya Wimbo! W, W, W! Tujifunze herufi W!",
+    "audio": "/audio/sw/songs/w-song.mp3",
+    "lyricsLines": [
+      {
+        "line": "W ni ya ___",
+        "blankWord": "Wimbo",
+        "choices": [
+          "Wimbo",
+          "Nyanya",
+          "Chumvi"
+        ],
+        "timestamp": 2.5
+      },
+      {
+        "line": "Herufi W, tuimbe ___",
+        "blankWord": "pamoja",
+        "choices": [
+          "pamoja",
+          "peke",
+          "kimya"
+        ],
+        "timestamp": 6
+      }
+    ]
+  },
+  "tracing": {
+    "uppercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320,
+      "transformImage": "/images/things/tomato.png"
+    },
+    "lowercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320
+    }
+  },
+  "games": {
+    "memory_cards": {
+      "pairs": [
+        {
+          "word": "Nyanya",
+          "image": "/images/things/tomato.png",
+          "audio": "/audio/sw/words/nyanya.mp3"
+        },
+        {
+          "word": "Chumvi",
+          "image": "/images/things/salt.png",
+          "audio": "/audio/sw/words/chumvi.mp3"
+        },
+        {
+          "word": "Kijiko",
+          "image": "/images/things/spoon.png",
+          "audio": "/audio/sw/words/kijiko.mp3"
+        }
+      ]
+    },
+    "letter_puzzle": {
+      "svgPath": "",
+      "pieces": 4
+    },
+    "feed_character": {
+      "correctItems": []
+    },
+    "build_word": {
+      "words": [
+        {
+          "word": "WIMBO",
+          "image": "",
+          "audio": "/audio/sw/letters/w/wimbo.mp3",
+          "extraLetters": [
+            "B",
+            "K",
+            "M",
+            "S"
+          ]
+        },
+        {
+          "word": "WATOTO",
+          "image": "",
+          "audio": "/audio/sw/letters/w/watoto.mp3",
+          "extraLetters": [
+            "B",
+            "K",
+            "M",
+            "S"
+          ]
+        }
+      ]
+    },
+    "match_picture": {
+      "rounds": []
+    }
+  },
+  "distractors": [
+    {
+      "id": "nyanya",
+      "word": "Nyanya",
+      "image": "/images/things/tomato.png"
+    },
+    {
+      "id": "chumvi",
+      "word": "Chumvi",
+      "image": "/images/things/salt.png"
+    },
+    {
+      "id": "kijiko",
+      "word": "Kijiko",
+      "image": "/images/things/spoon.png"
+    },
+    {
+      "id": "kofia",
+      "word": "Kofia",
+      "image": "/images/things/hat.png"
+    },
+    {
+      "id": "kiatu",
+      "word": "Kiatu",
+      "image": "/images/things/shoe.png"
+    }
+  ],
+  "rewards": [
+    {
+      "id": "candy",
+      "type": "food",
+      "name": "Peremende",
+      "image": "/images/things/candy.png",
+      "sound": "/audio/rewards/crunch.mp3",
+      "characterState": "nom_nom"
+    },
+    {
+      "id": "car",
+      "type": "toy",
+      "name": "Gari",
+      "image": "/images/things/car.png",
+      "sound": "/audio/rewards/vroom.mp3",
+      "characterState": "excited"
+    },
+    {
+      "id": "ice_cream",
+      "type": "food",
+      "name": "Aiskrimu",
+      "image": "/images/things/icecream.png",
+      "sound": "/audio/rewards/slurp.mp3",
+      "characterState": "nom_nom"
+    }
+  ]
+}

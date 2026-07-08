@@ -1,0 +1,168 @@
+{
+  "letter": "N",
+  "lowercase": "n",
+  "color": "#48C9B0",
+  "backgroundColor": "#E8F8F5",
+  "letterAudio": "/audio/letters/names/n.mp3",
+  "characterSpeech": {
+    "intro": "/audio/speech/n/intro.mp3",
+    "touchPrompt": "/audio/speech/n/touch-prompt.mp3",
+    "celebration": "/audio/speech/n/celebration.mp3",
+    "lowercaseIntro": "/audio/speech/n/lowercase-intro.mp3"
+  },
+  "words": [
+    {
+      "word": "Net",
+      "image": "/images/things/mosquito-net.png",
+      "audio": "/audio/words/net.mp3"
+    }
+  ],
+  "song": {
+    "lyrics": "N is for Net! N, N, N! Let's learn the letter N!",
+    "audio": "/audio/songs/n-song.mp3",
+    "lyricsLines": [
+      {
+        "line": "N is for ___",
+        "blankWord": "Net",
+        "choices": [
+          "Net",
+          "Bread",
+          "Candy"
+        ],
+        "timestamp": 2.5
+      },
+      {
+        "line": "Letter N, let's all ___",
+        "blankWord": "sing",
+        "choices": [
+          "sing",
+          "cry",
+          "sleep"
+        ],
+        "timestamp": 6
+      }
+    ]
+  },
+  "tracing": {
+    "uppercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320,
+      "transformImage": "/images/things/mosquito-net.png"
+    },
+    "lowercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320
+    }
+  },
+  "games": {
+    "memory_cards": {
+      "pairs": [
+        {
+          "word": "Net",
+          "image": "/images/things/mosquito-net.png",
+          "audio": "/audio/words/net.mp3"
+        },
+        {
+          "word": "Bread",
+          "image": "/images/actions/eat-bread.jpg",
+          "audio": "/audio/words/bread.mp3"
+        },
+        {
+          "word": "Candy",
+          "image": "/images/things/candy.png",
+          "audio": "/audio/words/candy.mp3"
+        }
+      ]
+    },
+    "letter_puzzle": {
+      "svgPath": "",
+      "pieces": 4
+    },
+    "feed_character": {
+      "correctItems": [
+        {
+          "word": "Net",
+          "image": "/images/things/mosquito-net.png",
+          "audio": "/audio/words/net.mp3"
+        }
+      ]
+    },
+    "build_word": {
+      "words": [
+        {
+          "word": "NET",
+          "image": "/images/things/mosquito-net.png",
+          "audio": "/audio/words/net.mp3",
+          "extraLetters": [
+            "B",
+            "C",
+            "D",
+            "F"
+          ]
+        }
+      ]
+    },
+    "match_picture": {
+      "rounds": [
+        {
+          "letter": "N",
+          "correctImage": "/images/things/mosquito-net.png",
+          "correctWord": "Net"
+        }
+      ]
+    }
+  },
+  "distractors": [
+    {
+      "id": "bread",
+      "word": "Bread",
+      "image": "/images/actions/eat-bread.jpg"
+    },
+    {
+      "id": "candy",
+      "word": "Candy",
+      "image": "/images/things/candy.png"
+    },
+    {
+      "id": "chocolate",
+      "word": "Chocolate",
+      "image": "/images/things/chocolate.png"
+    },
+    {
+      "id": "tomato",
+      "word": "Tomato",
+      "image": "/images/things/tomato.png"
+    },
+    {
+      "id": "salt",
+      "word": "Salt",
+      "image": "/images/things/salt.png"
+    }
+  ],
+  "rewards": [
+    {
+      "id": "candy",
+      "type": "food",
+      "name": "Candy",
+      "image": "/images/things/candy.png",
+      "sound": "/audio/feedback/rewards/crunch.mp3",
+      "characterState": "nom_nom"
+    },
+    {
+      "id": "car",
+      "type": "toy",
+      "name": "Toy Car",
+      "image": "/images/things/car.png",
+      "sound": "/audio/feedback/rewards/vroom.mp3",
+      "characterState": "excited"
+    },
+    {
+      "id": "ice_cream",
+      "type": "food",
+      "name": "Ice Cream",
+      "image": "/images/things/icecream.png",
+      "sound": "/audio/feedback/rewards/slurp.mp3",
+      "characterState": "nom_nom"
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "letter": "Z",
+  "lowercase": "z",
+  "color": "#26A69A",
+  "backgroundColor": "#E0F2F1",
+  "letterAudio": "/audio/sw/letters/z/letter-z.mp3",
+  "characterSpeech": {
+    "intro": "/audio/sw/speech/z/intro.mp3",
+    "touchPrompt": "/audio/sw/speech/z/touch-prompt.mp3",
+    "celebration": "/audio/sw/speech/z/celebration.mp3",
+    "lowercaseIntro": "/audio/sw/speech/z/lowercase-intro.mp3"
+  },
+  "words": [
+    {
+      "word": "Zebra",
+      "image": "/images/things/zebra.png",
+      "audio": "/audio/sw/letters/z/zebra.mp3"
+    },
+    {
+      "word": "Zawadi",
+      "image": "",
+      "audio": "/audio/sw/letters/z/zawadi.mp3"
+    },
+    {
+      "word": "Ziwa",
+      "image": "",
+      "audio": "/audio/sw/letters/z/ziwa.mp3"
+    }
+  ],
+  "song": {
+    "lyrics": "Z ni ya Zebra! Z, Z, Z! Tujifunze herufi Z!",
+    "audio": "/audio/sw/songs/z-song.mp3",
+    "lyricsLines": [
+      {
+        "line": "Z ni ya ___",
+        "blankWord": "Zebra",
+        "choices": [
+          "Zebra",
+          "Nyanya",
+          "Chumvi"
+        ],
+        "timestamp": 2.5
+      },
+      {
+        "line": "Herufi Z, tuimbe ___",
+        "blankWord": "pamoja",
+        "choices": [
+          "pamoja",
+          "peke",
+          "kimya"
+        ],
+        "timestamp": 6
+      }
+    ]
+  },
+  "tracing": {
+    "uppercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320,
+      "transformImage": "/images/things/zebra.png"
+    },
+    "lowercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320
+    }
+  },
+  "games": {
+    "memory_cards": {
+      "pairs": [
+        {
+          "word": "Zebra",
+          "image": "/images/things/zebra.png",
+          "audio": "/audio/sw/letters/z/zebra.mp3"
+        },
+        {
+          "word": "Nyanya",
+          "image": "/images/things/tomato.png",
+          "audio": "/audio/sw/words/nyanya.mp3"
+        },
+        {
+          "word": "Chumvi",
+          "image": "/images/things/salt.png",
+          "audio": "/audio/sw/words/chumvi.mp3"
+        }
+      ]
+    },
+    "letter_puzzle": {
+      "svgPath": "",
+      "pieces": 4
+    },
+    "feed_character": {
+      "correctItems": [
+        {
+          "word": "Zebra",
+          "image": "/images/things/zebra.png",
+          "audio": "/audio/sw/letters/z/zebra.mp3"
+        }
+      ]
+    },
+    "build_word": {
+      "words": [
+        {
+          "word": "ZEBRA",
+          "image": "/images/things/zebra.png",
+          "audio": "/audio/sw/letters/z/zebra.mp3",
+          "extraLetters": [
+            "B",
+            "K",
+            "M",
+            "S"
+          ]
+        }
+      ]
+    },
+    "match_picture": {
+      "rounds": [
+        {
+          "letter": "Z",
+          "correctImage": "/images/things/zebra.png",
+          "correctWord": "Zebra"
+        }
+      ]
+    }
+  },
+  "distractors": [
+    {
+      "id": "nyanya",
+      "word": "Nyanya",
+      "image": "/images/things/tomato.png"
+    },
+    {
+      "id": "chumvi",
+      "word": "Chumvi",
+      "image": "/images/things/salt.png"
+    },
+    {
+      "id": "kijiko",
+      "word": "Kijiko",
+      "image": "/images/things/spoon.png"
+    },
+    {
+      "id": "kofia",
+      "word": "Kofia",
+      "image": "/images/things/hat.png"
+    },
+    {
+      "id": "kiatu",
+      "word": "Kiatu",
+      "image": "/images/things/shoe.png"
+    }
+  ],
+  "rewards": [
+    {
+      "id": "candy",
+      "type": "food",
+      "name": "Peremende",
+      "image": "/images/things/candy.png",
+      "sound": "/audio/rewards/crunch.mp3",
+      "characterState": "nom_nom"
+    },
+    {
+      "id": "car",
+      "type": "toy",
+      "name": "Gari",
+      "image": "/images/things/car.png",
+      "sound": "/audio/rewards/vroom.mp3",
+      "characterState": "excited"
+    },
+    {
+      "id": "ice_cream",
+      "type": "food",
+      "name": "Aiskrimu",
+      "image": "/images/things/icecream.png",
+      "sound": "/audio/rewards/slurp.mp3",
+      "characterState": "nom_nom"
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "letter": "A",
+  "lowercase": "a",
+  "color": "#FF6B6B",
+  "backgroundColor": "#FFF3E0",
+  "letterAudio": "/audio/letters/names/a.mp3",
+  "characterSpeech": {
+    "intro": "/audio/speech/a/intro.mp3",
+    "touchPrompt": "/audio/speech/a/touch-prompt.mp3",
+    "celebration": "/audio/speech/a/celebration.mp3",
+    "lowercaseIntro": "/audio/speech/a/lowercase-intro.mp3"
+  },
+  "words": [
+    {
+      "word": "Apple",
+      "image": "/images/things/apple.png",
+      "audio": "/audio/words/apple.mp3"
+    },
+    {
+      "word": "Ant",
+      "image": "/images/things/ant.png",
+      "audio": "/audio/words/ant.mp3"
+    },
+    {
+      "word": "Airplane",
+      "image": "/images/things/airplane.png",
+      "audio": "/audio/words/airplane.mp3"
+    }
+  ],
+  "song": {
+    "lyrics": "A is for Apple! A, A, A! Let's learn the letter A!",
+    "audio": "/audio/songs/a-song.mp3",
+    "lyricsLines": [
+      {
+        "line": "A is for ___",
+        "blankWord": "Apple",
+        "choices": [
+          "Candy",
+          "Apple",
+          "Bread"
+        ],
+        "timestamp": 2.5
+      },
+      {
+        "line": "Letter A, let's all ___",
+        "blankWord": "sing",
+        "choices": [
+          "sing",
+          "cry",
+          "sleep"
+        ],
+        "timestamp": 6
+      }
+    ]
+  },
+  "tracing": {
+    "uppercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320,
+      "transformImage": "/images/things/apple.png"
+    },
+    "lowercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320
+    }
+  },
+  "games": {
+    "memory_cards": {
+      "pairs": [
+        {
+          "word": "Apple",
+          "image": "/images/things/apple.png",
+          "audio": "/audio/words/apple.mp3"
+        },
+        {
+          "word": "Ant",
+          "image": "/images/things/ant.png",
+          "audio": "/audio/words/ant.mp3"
+        },
+        {
+          "word": "Airplane",
+          "image": "/images/things/airplane.png",
+          "audio": "/audio/words/airplane.mp3"
+        }
+      ]
+    },
+    "letter_puzzle": {
+      "svgPath": "",
+      "pieces": 4
+    },
+    "feed_character": {
+      "correctItems": [
+        {
+          "word": "Apple",
+          "image": "/images/things/apple.png",
+          "audio": "/audio/words/apple.mp3"
+        },
+        {
+          "word": "Ant",
+          "image": "/images/things/ant.png",
+          "audio": "/audio/words/ant.mp3"
+        },
+        {
+          "word": "Airplane",
+          "image": "/images/things/airplane.png",
+          "audio": "/audio/words/airplane.mp3"
+        }
+      ]
+    },
+    "build_word": {
+      "words": [
+        {
+          "word": "APPLE",
+          "image": "/images/things/apple.png",
+          "audio": "/audio/words/apple.mp3",
+          "extraLetters": [
+            "B",
+            "C",
+            "D",
+            "F"
+          ]
+        },
+        {
+          "word": "ANT",
+          "image": "/images/things/ant.png",
+          "audio": "/audio/words/ant.mp3",
+          "extraLetters": [
+            "B",
+            "C",
+            "D",
+            "F"
+          ]
+        }
+      ]
+    },
+    "match_picture": {
+      "rounds": [
+        {
+          "letter": "A",
+          "correctImage": "/images/things/apple.png",
+          "correctWord": "Apple"
+        },
+        {
+          "letter": "A",
+          "correctImage": "/images/things/ant.png",
+          "correctWord": "Ant"
+        },
+        {
+          "letter": "A",
+          "correctImage": "/images/things/airplane.png",
+          "correctWord": "Airplane"
+        }
+      ]
+    }
+  },
+  "distractors": [
+    {
+      "id": "bread",
+      "word": "Bread",
+      "image": "/images/actions/eat-bread.jpg"
+    },
+    {
+      "id": "candy",
+      "word": "Candy",
+      "image": "/images/things/candy.png"
+    },
+    {
+      "id": "chocolate",
+      "word": "Chocolate",
+      "image": "/images/things/chocolate.png"
+    },
+    {
+      "id": "tomato",
+      "word": "Tomato",
+      "image": "/images/things/tomato.png"
+    },
+    {
+      "id": "salt",
+      "word": "Salt",
+      "image": "/images/things/salt.png"
+    }
+  ],
+  "rewards": [
+    {
+      "id": "candy",
+      "type": "food",
+      "name": "Candy",
+      "image": "/images/things/candy.png",
+      "sound": "/audio/feedback/rewards/crunch.mp3",
+      "characterState": "nom_nom"
+    },
+    {
+      "id": "car",
+      "type": "toy",
+      "name": "Toy Car",
+      "image": "/images/things/car.png",
+      "sound": "/audio/feedback/rewards/vroom.mp3",
+      "characterState": "excited"
+    },
+    {
+      "id": "ice_cream",
+      "type": "food",
+      "name": "Ice Cream",
+      "image": "/images/things/icecream.png",
+      "sound": "/audio/feedback/rewards/slurp.mp3",
+      "characterState": "nom_nom"
+    }
+  ]
+}

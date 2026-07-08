@@ -1,0 +1,194 @@
+{
+  "letter": "Z",
+  "lowercase": "z",
+  "color": "#26A69A",
+  "backgroundColor": "#E0F2F1",
+  "letterAudio": "/audio/letters/names/z.mp3",
+  "characterSpeech": {
+    "intro": "/audio/speech/z/intro.mp3",
+    "touchPrompt": "/audio/speech/z/touch-prompt.mp3",
+    "celebration": "/audio/speech/z/celebration.mp3",
+    "lowercaseIntro": "/audio/speech/z/lowercase-intro.mp3"
+  },
+  "words": [
+    {
+      "word": "Zebra",
+      "image": "/images/things/zebra.png",
+      "audio": "/audio/words/zebra.mp3"
+    },
+    {
+      "word": "Zip",
+      "image": "/images/things/zip.png",
+      "audio": "/audio/words/zip.mp3"
+    }
+  ],
+  "song": {
+    "lyrics": "Z is for Zebra! Z, Z, Z! Let's learn the letter Z!",
+    "audio": "/audio/songs/z-song.mp3",
+    "lyricsLines": [
+      {
+        "line": "Z is for ___",
+        "blankWord": "Zebra",
+        "choices": [
+          "Zebra",
+          "Bread",
+          "Candy"
+        ],
+        "timestamp": 2.5
+      },
+      {
+        "line": "Letter Z, let's all ___",
+        "blankWord": "sing",
+        "choices": [
+          "sing",
+          "cry",
+          "sleep"
+        ],
+        "timestamp": 6
+      }
+    ]
+  },
+  "tracing": {
+    "uppercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320,
+      "transformImage": "/images/things/zebra.png"
+    },
+    "lowercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320
+    }
+  },
+  "games": {
+    "memory_cards": {
+      "pairs": [
+        {
+          "word": "Zebra",
+          "image": "/images/things/zebra.png",
+          "audio": "/audio/words/zebra.mp3"
+        },
+        {
+          "word": "Zip",
+          "image": "/images/things/zip.png",
+          "audio": "/audio/words/zip.mp3"
+        },
+        {
+          "word": "Bread",
+          "image": "/images/actions/eat-bread.jpg",
+          "audio": "/audio/words/bread.mp3"
+        }
+      ]
+    },
+    "letter_puzzle": {
+      "svgPath": "",
+      "pieces": 4
+    },
+    "feed_character": {
+      "correctItems": [
+        {
+          "word": "Zebra",
+          "image": "/images/things/zebra.png",
+          "audio": "/audio/words/zebra.mp3"
+        },
+        {
+          "word": "Zip",
+          "image": "/images/things/zip.png",
+          "audio": "/audio/words/zip.mp3"
+        }
+      ]
+    },
+    "build_word": {
+      "words": [
+        {
+          "word": "ZEBRA",
+          "image": "/images/things/zebra.png",
+          "audio": "/audio/words/zebra.mp3",
+          "extraLetters": [
+            "B",
+            "C",
+            "D",
+            "F"
+          ]
+        },
+        {
+          "word": "ZIP",
+          "image": "/images/things/zip.png",
+          "audio": "/audio/words/zip.mp3",
+          "extraLetters": [
+            "B",
+            "C",
+            "D",
+            "F"
+          ]
+        }
+      ]
+    },
+    "match_picture": {
+      "rounds": [
+        {
+          "letter": "Z",
+          "correctImage": "/images/things/zebra.png",
+          "correctWord": "Zebra"
+        },
+        {
+          "letter": "Z",
+          "correctImage": "/images/things/zip.png",
+          "correctWord": "Zip"
+        }
+      ]
+    }
+  },
+  "distractors": [
+    {
+      "id": "bread",
+      "word": "Bread",
+      "image": "/images/actions/eat-bread.jpg"
+    },
+    {
+      "id": "candy",
+      "word": "Candy",
+      "image": "/images/things/candy.png"
+    },
+    {
+      "id": "chocolate",
+      "word": "Chocolate",
+      "image": "/images/things/chocolate.png"
+    },
+    {
+      "id": "tomato",
+      "word": "Tomato",
+      "image": "/images/things/tomato.png"
+    },
+    {
+      "id": "salt",
+      "word": "Salt",
+      "image": "/images/things/salt.png"
+    }
+  ],
+  "rewards": [
+    {
+      "id": "candy",
+      "type": "food",
+      "name": "Candy",
+      "image": "/images/things/candy.png",
+      "sound": "/audio/feedback/rewards/crunch.mp3",
+      "characterState": "nom_nom"
+    },
+    {
+      "id": "car",
+      "type": "toy",
+      "name": "Toy Car",
+      "image": "/images/things/car.png",
+      "sound": "/audio/feedback/rewards/vroom.mp3",
+      "characterState": "excited"
+    },
+    {
+      "id": "ice_cream",
+      "type": "food",
+      "name": "Ice Cream",
+      "image": "/images/things/icecream.png",
+      "sound": "/audio/feedback/rewards/slurp.mp3",
+      "characterState": "nom_nom"
+    }
+  ]
+}

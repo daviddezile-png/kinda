@@ -1,0 +1,209 @@
+{
+  "letter": "S",
+  "lowercase": "s",
+  "color": "#E8A90C",
+  "backgroundColor": "#FFF8E1",
+  "letterAudio": "/audio/letters/names/s.mp3",
+  "characterSpeech": {
+    "intro": "/audio/speech/s/intro.mp3",
+    "touchPrompt": "/audio/speech/s/touch-prompt.mp3",
+    "celebration": "/audio/speech/s/celebration.mp3",
+    "lowercaseIntro": "/audio/speech/s/lowercase-intro.mp3"
+  },
+  "words": [
+    {
+      "word": "Sun",
+      "image": "/images/things/sun.jpg",
+      "audio": "/audio/words/sun.mp3"
+    },
+    {
+      "word": "Salt",
+      "image": "/images/things/salt.png",
+      "audio": "/audio/words/salt.mp3"
+    },
+    {
+      "word": "Shoe",
+      "image": "/images/things/shoe.png",
+      "audio": "/audio/words/shoe.mp3"
+    }
+  ],
+  "song": {
+    "lyrics": "S is for Sun! S, S, S! Let's learn the letter S!",
+    "audio": "/audio/songs/s-song.mp3",
+    "lyricsLines": [
+      {
+        "line": "S is for ___",
+        "blankWord": "Sun",
+        "choices": [
+          "Candy",
+          "Sun",
+          "Bread"
+        ],
+        "timestamp": 2.5
+      },
+      {
+        "line": "Letter S, let's all ___",
+        "blankWord": "sing",
+        "choices": [
+          "sing",
+          "cry",
+          "sleep"
+        ],
+        "timestamp": 6
+      }
+    ]
+  },
+  "tracing": {
+    "uppercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320,
+      "transformImage": "/images/things/sun.jpg"
+    },
+    "lowercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320
+    }
+  },
+  "games": {
+    "memory_cards": {
+      "pairs": [
+        {
+          "word": "Sun",
+          "image": "/images/things/sun.jpg",
+          "audio": "/audio/words/sun.mp3"
+        },
+        {
+          "word": "Salt",
+          "image": "/images/things/salt.png",
+          "audio": "/audio/words/salt.mp3"
+        },
+        {
+          "word": "Shoe",
+          "image": "/images/things/shoe.png",
+          "audio": "/audio/words/shoe.mp3"
+        }
+      ]
+    },
+    "letter_puzzle": {
+      "svgPath": "",
+      "pieces": 4
+    },
+    "feed_character": {
+      "correctItems": [
+        {
+          "word": "Sun",
+          "image": "/images/things/sun.jpg",
+          "audio": "/audio/words/sun.mp3"
+        },
+        {
+          "word": "Salt",
+          "image": "/images/things/salt.png",
+          "audio": "/audio/words/salt.mp3"
+        },
+        {
+          "word": "Shoe",
+          "image": "/images/things/shoe.png",
+          "audio": "/audio/words/shoe.mp3"
+        }
+      ]
+    },
+    "build_word": {
+      "words": [
+        {
+          "word": "SUN",
+          "image": "/images/things/sun.jpg",
+          "audio": "/audio/words/sun.mp3",
+          "extraLetters": [
+            "B",
+            "C",
+            "D",
+            "F"
+          ]
+        },
+        {
+          "word": "SALT",
+          "image": "/images/things/salt.png",
+          "audio": "/audio/words/salt.mp3",
+          "extraLetters": [
+            "B",
+            "C",
+            "D",
+            "F"
+          ]
+        }
+      ]
+    },
+    "match_picture": {
+      "rounds": [
+        {
+          "letter": "S",
+          "correctImage": "/images/things/sun.jpg",
+          "correctWord": "Sun"
+        },
+        {
+          "letter": "S",
+          "correctImage": "/images/things/salt.png",
+          "correctWord": "Salt"
+        },
+        {
+          "letter": "S",
+          "correctImage": "/images/things/shoe.png",
+          "correctWord": "Shoe"
+        }
+      ]
+    }
+  },
+  "distractors": [
+    {
+      "id": "bread",
+      "word": "Bread",
+      "image": "/images/actions/eat-bread.jpg"
+    },
+    {
+      "id": "candy",
+      "word": "Candy",
+      "image": "/images/things/candy.png"
+    },
+    {
+      "id": "chocolate",
+      "word": "Chocolate",
+      "image": "/images/things/chocolate.png"
+    },
+    {
+      "id": "tomato",
+      "word": "Tomato",
+      "image": "/images/things/tomato.png"
+    },
+    {
+      "id": "yolk",
+      "word": "Yolk",
+      "image": "/images/things/yolk.png"
+    }
+  ],
+  "rewards": [
+    {
+      "id": "candy",
+      "type": "food",
+      "name": "Candy",
+      "image": "/images/things/candy.png",
+      "sound": "/audio/feedback/rewards/crunch.mp3",
+      "characterState": "nom_nom"
+    },
+    {
+      "id": "car",
+      "type": "toy",
+      "name": "Toy Car",
+      "image": "/images/things/car.png",
+      "sound": "/audio/feedback/rewards/vroom.mp3",
+      "characterState": "excited"
+    },
+    {
+      "id": "ice_cream",
+      "type": "food",
+      "name": "Ice Cream",
+      "image": "/images/things/icecream.png",
+      "sound": "/audio/feedback/rewards/slurp.mp3",
+      "characterState": "nom_nom"
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "letter": "A",
+  "lowercase": "a",
+  "color": "#FF6B6B",
+  "backgroundColor": "#FFF3E0",
+  "letterAudio": "/audio/sw/letters/a/letter-a.mp3",
+  "characterSpeech": {
+    "intro": "/audio/sw/speech/a/intro.mp3",
+    "touchPrompt": "/audio/sw/speech/a/touch-prompt.mp3",
+    "celebration": "/audio/sw/speech/a/celebration.mp3",
+    "lowercaseIntro": "/audio/sw/speech/a/lowercase-intro.mp3"
+  },
+  "words": [
+    {
+      "word": "Aiskrimu",
+      "image": "/images/things/icecream.png",
+      "audio": "/audio/sw/letters/a/aiskrimu.mp3"
+    },
+    {
+      "word": "Asali",
+      "image": "",
+      "audio": "/audio/sw/letters/a/asali.mp3"
+    },
+    {
+      "word": "Askari",
+      "image": "",
+      "audio": "/audio/sw/letters/a/askari.mp3"
+    }
+  ],
+  "song": {
+    "lyrics": "A ni ya Aiskrimu! A, A, A! Tujifunze herufi A!",
+    "audio": "/audio/sw/songs/a-song.mp3",
+    "lyricsLines": [
+      {
+        "line": "A ni ya ___",
+        "blankWord": "Aiskrimu",
+        "choices": [
+          "Aiskrimu",
+          "Nyanya",
+          "Chumvi"
+        ],
+        "timestamp": 2.5
+      },
+      {
+        "line": "Herufi A, tuimbe ___",
+        "blankWord": "pamoja",
+        "choices": [
+          "pamoja",
+          "peke",
+          "kimya"
+        ],
+        "timestamp": 6
+      }
+    ]
+  },
+  "tracing": {
+    "uppercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320,
+      "transformImage": "/images/things/icecream.png"
+    },
+    "lowercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320
+    }
+  },
+  "games": {
+    "memory_cards": {
+      "pairs": [
+        {
+          "word": "Aiskrimu",
+          "image": "/images/things/icecream.png",
+          "audio": "/audio/sw/letters/a/aiskrimu.mp3"
+        },
+        {
+          "word": "Nyanya",
+          "image": "/images/things/tomato.png",
+          "audio": "/audio/sw/words/nyanya.mp3"
+        },
+        {
+          "word": "Chumvi",
+          "image": "/images/things/salt.png",
+          "audio": "/audio/sw/words/chumvi.mp3"
+        }
+      ]
+    },
+    "letter_puzzle": {
+      "svgPath": "",
+      "pieces": 4
+    },
+    "feed_character": {
+      "correctItems": [
+        {
+          "word": "Aiskrimu",
+          "image": "/images/things/icecream.png",
+          "audio": "/audio/sw/letters/a/aiskrimu.mp3"
+        }
+      ]
+    },
+    "build_word": {
+      "words": [
+        {
+          "word": "AISKRIMU",
+          "image": "/images/things/icecream.png",
+          "audio": "/audio/sw/letters/a/aiskrimu.mp3",
+          "extraLetters": [
+            "B",
+            "K",
+            "M",
+            "S"
+          ]
+        }
+      ]
+    },
+    "match_picture": {
+      "rounds": [
+        {
+          "letter": "A",
+          "correctImage": "/images/things/icecream.png",
+          "correctWord": "Aiskrimu"
+        }
+      ]
+    }
+  },
+  "distractors": [
+    {
+      "id": "nyanya",
+      "word": "Nyanya",
+      "image": "/images/things/tomato.png"
+    },
+    {
+      "id": "chumvi",
+      "word": "Chumvi",
+      "image": "/images/things/salt.png"
+    },
+    {
+      "id": "kijiko",
+      "word": "Kijiko",
+      "image": "/images/things/spoon.png"
+    },
+    {
+      "id": "kofia",
+      "word": "Kofia",
+      "image": "/images/things/hat.png"
+    },
+    {
+      "id": "kiatu",
+      "word": "Kiatu",
+      "image": "/images/things/shoe.png"
+    }
+  ],
+  "rewards": [
+    {
+      "id": "candy",
+      "type": "food",
+      "name": "Peremende",
+      "image": "/images/things/candy.png",
+      "sound": "/audio/rewards/crunch.mp3",
+      "characterState": "nom_nom"
+    },
+    {
+      "id": "car",
+      "type": "toy",
+      "name": "Gari",
+      "image": "/images/things/car.png",
+      "sound": "/audio/rewards/vroom.mp3",
+      "characterState": "excited"
+    },
+    {
+      "id": "ice_cream",
+      "type": "food",
+      "name": "Aiskrimu",
+      "image": "/images/things/icecream.png",
+      "sound": "/audio/rewards/slurp.mp3",
+      "characterState": "nom_nom"
+    }
+  ]
+}

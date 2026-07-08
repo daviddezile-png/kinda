@@ -1,0 +1,168 @@
+{
+  "letter": "Q",
+  "lowercase": "q",
+  "color": "#7E57C2",
+  "backgroundColor": "#EDE7F6",
+  "letterAudio": "/audio/letters/names/q.mp3",
+  "characterSpeech": {
+    "intro": "/audio/speech/q/intro.mp3",
+    "touchPrompt": "/audio/speech/q/touch-prompt.mp3",
+    "celebration": "/audio/speech/q/celebration.mp3",
+    "lowercaseIntro": "/audio/speech/q/lowercase-intro.mp3"
+  },
+  "words": [
+    {
+      "word": "Queen",
+      "image": "/images/things/queen.png",
+      "audio": "/audio/words/queen.mp3"
+    }
+  ],
+  "song": {
+    "lyrics": "Q is for Queen! Q, Q, Q! Let's learn the letter Q!",
+    "audio": "/audio/songs/q-song.mp3",
+    "lyricsLines": [
+      {
+        "line": "Q is for ___",
+        "blankWord": "Queen",
+        "choices": [
+          "Queen",
+          "Bread",
+          "Candy"
+        ],
+        "timestamp": 2.5
+      },
+      {
+        "line": "Letter Q, let's all ___",
+        "blankWord": "sing",
+        "choices": [
+          "sing",
+          "cry",
+          "sleep"
+        ],
+        "timestamp": 6
+      }
+    ]
+  },
+  "tracing": {
+    "uppercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320,
+      "transformImage": "/images/things/queen.png"
+    },
+    "lowercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320
+    }
+  },
+  "games": {
+    "memory_cards": {
+      "pairs": [
+        {
+          "word": "Queen",
+          "image": "/images/things/queen.png",
+          "audio": "/audio/words/queen.mp3"
+        },
+        {
+          "word": "Bread",
+          "image": "/images/actions/eat-bread.jpg",
+          "audio": "/audio/words/bread.mp3"
+        },
+        {
+          "word": "Candy",
+          "image": "/images/things/candy.png",
+          "audio": "/audio/words/candy.mp3"
+        }
+      ]
+    },
+    "letter_puzzle": {
+      "svgPath": "",
+      "pieces": 4
+    },
+    "feed_character": {
+      "correctItems": [
+        {
+          "word": "Queen",
+          "image": "/images/things/queen.png",
+          "audio": "/audio/words/queen.mp3"
+        }
+      ]
+    },
+    "build_word": {
+      "words": [
+        {
+          "word": "QUEEN",
+          "image": "/images/things/queen.png",
+          "audio": "/audio/words/queen.mp3",
+          "extraLetters": [
+            "B",
+            "C",
+            "D",
+            "F"
+          ]
+        }
+      ]
+    },
+    "match_picture": {
+      "rounds": [
+        {
+          "letter": "Q",
+          "correctImage": "/images/things/queen.png",
+          "correctWord": "Queen"
+        }
+      ]
+    }
+  },
+  "distractors": [
+    {
+      "id": "bread",
+      "word": "Bread",
+      "image": "/images/actions/eat-bread.jpg"
+    },
+    {
+      "id": "candy",
+      "word": "Candy",
+      "image": "/images/things/candy.png"
+    },
+    {
+      "id": "chocolate",
+      "word": "Chocolate",
+      "image": "/images/things/chocolate.png"
+    },
+    {
+      "id": "tomato",
+      "word": "Tomato",
+      "image": "/images/things/tomato.png"
+    },
+    {
+      "id": "salt",
+      "word": "Salt",
+      "image": "/images/things/salt.png"
+    }
+  ],
+  "rewards": [
+    {
+      "id": "candy",
+      "type": "food",
+      "name": "Candy",
+      "image": "/images/things/candy.png",
+      "sound": "/audio/feedback/rewards/crunch.mp3",
+      "characterState": "nom_nom"
+    },
+    {
+      "id": "car",
+      "type": "toy",
+      "name": "Toy Car",
+      "image": "/images/things/car.png",
+      "sound": "/audio/feedback/rewards/vroom.mp3",
+      "characterState": "excited"
+    },
+    {
+      "id": "ice_cream",
+      "type": "food",
+      "name": "Ice Cream",
+      "image": "/images/things/icecream.png",
+      "sound": "/audio/feedback/rewards/slurp.mp3",
+      "characterState": "nom_nom"
+    }
+  ]
+}

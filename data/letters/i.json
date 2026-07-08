@@ -1,0 +1,168 @@
+{
+  "letter": "I",
+  "lowercase": "i",
+  "color": "#5DADE2",
+  "backgroundColor": "#EBF5FB",
+  "letterAudio": "/audio/letters/names/i.mp3",
+  "characterSpeech": {
+    "intro": "/audio/speech/i/intro.mp3",
+    "touchPrompt": "/audio/speech/i/touch-prompt.mp3",
+    "celebration": "/audio/speech/i/celebration.mp3",
+    "lowercaseIntro": "/audio/speech/i/lowercase-intro.mp3"
+  },
+  "words": [
+    {
+      "word": "Ice Cream",
+      "image": "/images/things/icecream.png",
+      "audio": "/audio/words/ice-cream.mp3"
+    }
+  ],
+  "song": {
+    "lyrics": "I is for Ice Cream! I, I, I! Let's learn the letter I!",
+    "audio": "/audio/songs/i-song.mp3",
+    "lyricsLines": [
+      {
+        "line": "I is for ___",
+        "blankWord": "Ice Cream",
+        "choices": [
+          "Bread",
+          "Candy",
+          "Ice Cream"
+        ],
+        "timestamp": 2.5
+      },
+      {
+        "line": "Letter I, let's all ___",
+        "blankWord": "sing",
+        "choices": [
+          "sing",
+          "cry",
+          "sleep"
+        ],
+        "timestamp": 6
+      }
+    ]
+  },
+  "tracing": {
+    "uppercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320,
+      "transformImage": "/images/things/icecream.png"
+    },
+    "lowercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320
+    }
+  },
+  "games": {
+    "memory_cards": {
+      "pairs": [
+        {
+          "word": "Ice Cream",
+          "image": "/images/things/icecream.png",
+          "audio": "/audio/words/ice-cream.mp3"
+        },
+        {
+          "word": "Bread",
+          "image": "/images/actions/eat-bread.jpg",
+          "audio": "/audio/words/bread.mp3"
+        },
+        {
+          "word": "Candy",
+          "image": "/images/things/candy.png",
+          "audio": "/audio/words/candy.mp3"
+        }
+      ]
+    },
+    "letter_puzzle": {
+      "svgPath": "",
+      "pieces": 4
+    },
+    "feed_character": {
+      "correctItems": [
+        {
+          "word": "Ice Cream",
+          "image": "/images/things/icecream.png",
+          "audio": "/audio/words/ice-cream.mp3"
+        }
+      ]
+    },
+    "build_word": {
+      "words": [
+        {
+          "word": "ICECREAM",
+          "image": "/images/things/icecream.png",
+          "audio": "/audio/words/ice-cream.mp3",
+          "extraLetters": [
+            "B",
+            "C",
+            "D",
+            "F"
+          ]
+        }
+      ]
+    },
+    "match_picture": {
+      "rounds": [
+        {
+          "letter": "I",
+          "correctImage": "/images/things/icecream.png",
+          "correctWord": "Ice Cream"
+        }
+      ]
+    }
+  },
+  "distractors": [
+    {
+      "id": "bread",
+      "word": "Bread",
+      "image": "/images/actions/eat-bread.jpg"
+    },
+    {
+      "id": "candy",
+      "word": "Candy",
+      "image": "/images/things/candy.png"
+    },
+    {
+      "id": "chocolate",
+      "word": "Chocolate",
+      "image": "/images/things/chocolate.png"
+    },
+    {
+      "id": "tomato",
+      "word": "Tomato",
+      "image": "/images/things/tomato.png"
+    },
+    {
+      "id": "salt",
+      "word": "Salt",
+      "image": "/images/things/salt.png"
+    }
+  ],
+  "rewards": [
+    {
+      "id": "candy",
+      "type": "food",
+      "name": "Candy",
+      "image": "/images/things/candy.png",
+      "sound": "/audio/feedback/rewards/crunch.mp3",
+      "characterState": "nom_nom"
+    },
+    {
+      "id": "car",
+      "type": "toy",
+      "name": "Toy Car",
+      "image": "/images/things/car.png",
+      "sound": "/audio/feedback/rewards/vroom.mp3",
+      "characterState": "excited"
+    },
+    {
+      "id": "ice_cream",
+      "type": "food",
+      "name": "Ice Cream",
+      "image": "/images/things/icecream.png",
+      "sound": "/audio/feedback/rewards/slurp.mp3",
+      "characterState": "nom_nom"
+    }
+  ]
+}

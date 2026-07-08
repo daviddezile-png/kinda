@@ -1,0 +1,199 @@
+{
+  "letter": "C",
+  "lowercase": "c",
+  "color": "#45B7D1",
+  "backgroundColor": "#E8F4F8",
+  "letterAudio": "/audio/sw/letters/c/letter-c.mp3",
+  "characterSpeech": {
+    "intro": "/audio/sw/speech/c/intro.mp3",
+    "touchPrompt": "/audio/sw/speech/c/touch-prompt.mp3",
+    "celebration": "/audio/sw/speech/c/celebration.mp3",
+    "lowercaseIntro": "/audio/sw/speech/c/lowercase-intro.mp3"
+  },
+  "words": [
+    {
+      "word": "Chai",
+      "image": "/images/things/tea.png",
+      "audio": "/audio/sw/letters/c/chai.mp3"
+    },
+    {
+      "word": "Chungwa",
+      "image": "/images/things/orange.png",
+      "audio": "/audio/sw/letters/c/chungwa.mp3"
+    },
+    {
+      "word": "Chura",
+      "image": "",
+      "audio": "/audio/sw/letters/c/chura.mp3"
+    }
+  ],
+  "song": {
+    "lyrics": "C ni ya Chai! C, C, C! Tujifunze herufi C!",
+    "audio": "/audio/sw/songs/c-song.mp3",
+    "lyricsLines": [
+      {
+        "line": "C ni ya ___",
+        "blankWord": "Chai",
+        "choices": [
+          "Chai",
+          "Nyanya",
+          "Kijiko"
+        ],
+        "timestamp": 2.5
+      },
+      {
+        "line": "Herufi C, tuimbe ___",
+        "blankWord": "pamoja",
+        "choices": [
+          "pamoja",
+          "peke",
+          "kimya"
+        ],
+        "timestamp": 6
+      }
+    ]
+  },
+  "tracing": {
+    "uppercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320,
+      "transformImage": "/images/things/tea.png"
+    },
+    "lowercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320
+    }
+  },
+  "games": {
+    "memory_cards": {
+      "pairs": [
+        {
+          "word": "Chai",
+          "image": "/images/things/tea.png",
+          "audio": "/audio/sw/letters/c/chai.mp3"
+        },
+        {
+          "word": "Chungwa",
+          "image": "/images/things/orange.png",
+          "audio": "/audio/sw/letters/c/chungwa.mp3"
+        },
+        {
+          "word": "Nyanya",
+          "image": "/images/things/tomato.png",
+          "audio": "/audio/sw/words/nyanya.mp3"
+        }
+      ]
+    },
+    "letter_puzzle": {
+      "svgPath": "",
+      "pieces": 4
+    },
+    "feed_character": {
+      "correctItems": [
+        {
+          "word": "Chai",
+          "image": "/images/things/tea.png",
+          "audio": "/audio/sw/letters/c/chai.mp3"
+        },
+        {
+          "word": "Chungwa",
+          "image": "/images/things/orange.png",
+          "audio": "/audio/sw/letters/c/chungwa.mp3"
+        }
+      ]
+    },
+    "build_word": {
+      "words": [
+        {
+          "word": "CHAI",
+          "image": "/images/things/tea.png",
+          "audio": "/audio/sw/letters/c/chai.mp3",
+          "extraLetters": [
+            "B",
+            "K",
+            "M",
+            "S"
+          ]
+        },
+        {
+          "word": "CHUNGWA",
+          "image": "/images/things/orange.png",
+          "audio": "/audio/sw/letters/c/chungwa.mp3",
+          "extraLetters": [
+            "B",
+            "K",
+            "M",
+            "S"
+          ]
+        }
+      ]
+    },
+    "match_picture": {
+      "rounds": [
+        {
+          "letter": "C",
+          "correctImage": "/images/things/tea.png",
+          "correctWord": "Chai"
+        },
+        {
+          "letter": "C",
+          "correctImage": "/images/things/orange.png",
+          "correctWord": "Chungwa"
+        }
+      ]
+    }
+  },
+  "distractors": [
+    {
+      "id": "nyanya",
+      "word": "Nyanya",
+      "image": "/images/things/tomato.png"
+    },
+    {
+      "id": "kijiko",
+      "word": "Kijiko",
+      "image": "/images/things/spoon.png"
+    },
+    {
+      "id": "kofia",
+      "word": "Kofia",
+      "image": "/images/things/hat.png"
+    },
+    {
+      "id": "kiatu",
+      "word": "Kiatu",
+      "image": "/images/things/shoe.png"
+    },
+    {
+      "id": "meza",
+      "word": "Meza",
+      "image": "/images/things/table.png"
+    }
+  ],
+  "rewards": [
+    {
+      "id": "candy",
+      "type": "food",
+      "name": "Peremende",
+      "image": "/images/things/candy.png",
+      "sound": "/audio/rewards/crunch.mp3",
+      "characterState": "nom_nom"
+    },
+    {
+      "id": "car",
+      "type": "toy",
+      "name": "Gari",
+      "image": "/images/things/car.png",
+      "sound": "/audio/rewards/vroom.mp3",
+      "characterState": "excited"
+    },
+    {
+      "id": "ice_cream",
+      "type": "food",
+      "name": "Aiskrimu",
+      "image": "/images/things/icecream.png",
+      "sound": "/audio/rewards/slurp.mp3",
+      "characterState": "nom_nom"
+    }
+  ]
+}

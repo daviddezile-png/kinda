@@ -1,0 +1,178 @@
+{
+  "letter": "T",
+  "lowercase": "t",
+  "color": "#66BB6A",
+  "backgroundColor": "#E8F5E9",
+  "letterAudio": "/audio/sw/letters/t/letter-t.mp3",
+  "characterSpeech": {
+    "intro": "/audio/sw/speech/t/intro.mp3",
+    "touchPrompt": "/audio/sw/speech/t/touch-prompt.mp3",
+    "celebration": "/audio/sw/speech/t/celebration.mp3",
+    "lowercaseIntro": "/audio/sw/speech/t/lowercase-intro.mp3"
+  },
+  "words": [
+    {
+      "word": "Tofaa",
+      "image": "/images/things/apple.png",
+      "audio": "/audio/sw/letters/t/tofaa.mp3"
+    },
+    {
+      "word": "Tembo",
+      "image": "",
+      "audio": "/audio/sw/letters/t/tembo.mp3"
+    },
+    {
+      "word": "Treni",
+      "image": "",
+      "audio": "/audio/sw/letters/t/treni.mp3"
+    }
+  ],
+  "song": {
+    "lyrics": "T ni ya Tofaa! T, T, T! Tujifunze herufi T!",
+    "audio": "/audio/sw/songs/t-song.mp3",
+    "lyricsLines": [
+      {
+        "line": "T ni ya ___",
+        "blankWord": "Tofaa",
+        "choices": [
+          "Tofaa",
+          "Nyanya",
+          "Chumvi"
+        ],
+        "timestamp": 2.5
+      },
+      {
+        "line": "Herufi T, tuimbe ___",
+        "blankWord": "pamoja",
+        "choices": [
+          "pamoja",
+          "peke",
+          "kimya"
+        ],
+        "timestamp": 6
+      }
+    ]
+  },
+  "tracing": {
+    "uppercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320,
+      "transformImage": "/images/things/apple.png"
+    },
+    "lowercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320
+    }
+  },
+  "games": {
+    "memory_cards": {
+      "pairs": [
+        {
+          "word": "Tofaa",
+          "image": "/images/things/apple.png",
+          "audio": "/audio/sw/letters/t/tofaa.mp3"
+        },
+        {
+          "word": "Nyanya",
+          "image": "/images/things/tomato.png",
+          "audio": "/audio/sw/words/nyanya.mp3"
+        },
+        {
+          "word": "Chumvi",
+          "image": "/images/things/salt.png",
+          "audio": "/audio/sw/words/chumvi.mp3"
+        }
+      ]
+    },
+    "letter_puzzle": {
+      "svgPath": "",
+      "pieces": 4
+    },
+    "feed_character": {
+      "correctItems": [
+        {
+          "word": "Tofaa",
+          "image": "/images/things/apple.png",
+          "audio": "/audio/sw/letters/t/tofaa.mp3"
+        }
+      ]
+    },
+    "build_word": {
+      "words": [
+        {
+          "word": "TOFAA",
+          "image": "/images/things/apple.png",
+          "audio": "/audio/sw/letters/t/tofaa.mp3",
+          "extraLetters": [
+            "B",
+            "K",
+            "M",
+            "S"
+          ]
+        }
+      ]
+    },
+    "match_picture": {
+      "rounds": [
+        {
+          "letter": "T",
+          "correctImage": "/images/things/apple.png",
+          "correctWord": "Tofaa"
+        }
+      ]
+    }
+  },
+  "distractors": [
+    {
+      "id": "nyanya",
+      "word": "Nyanya",
+      "image": "/images/things/tomato.png"
+    },
+    {
+      "id": "chumvi",
+      "word": "Chumvi",
+      "image": "/images/things/salt.png"
+    },
+    {
+      "id": "kijiko",
+      "word": "Kijiko",
+      "image": "/images/things/spoon.png"
+    },
+    {
+      "id": "kofia",
+      "word": "Kofia",
+      "image": "/images/things/hat.png"
+    },
+    {
+      "id": "kiatu",
+      "word": "Kiatu",
+      "image": "/images/things/shoe.png"
+    }
+  ],
+  "rewards": [
+    {
+      "id": "candy",
+      "type": "food",
+      "name": "Peremende",
+      "image": "/images/things/candy.png",
+      "sound": "/audio/rewards/crunch.mp3",
+      "characterState": "nom_nom"
+    },
+    {
+      "id": "car",
+      "type": "toy",
+      "name": "Gari",
+      "image": "/images/things/car.png",
+      "sound": "/audio/rewards/vroom.mp3",
+      "characterState": "excited"
+    },
+    {
+      "id": "ice_cream",
+      "type": "food",
+      "name": "Aiskrimu",
+      "image": "/images/things/icecream.png",
+      "sound": "/audio/rewards/slurp.mp3",
+      "characterState": "nom_nom"
+    }
+  ]
+}

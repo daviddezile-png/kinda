@@ -1,0 +1,209 @@
+{
+  "letter": "H",
+  "lowercase": "h",
+  "color": "#D4AC0D",
+  "backgroundColor": "#FFFDE7",
+  "letterAudio": "/audio/letters/names/h.mp3",
+  "characterSpeech": {
+    "intro": "/audio/speech/h/intro.mp3",
+    "touchPrompt": "/audio/speech/h/touch-prompt.mp3",
+    "celebration": "/audio/speech/h/celebration.mp3",
+    "lowercaseIntro": "/audio/speech/h/lowercase-intro.mp3"
+  },
+  "words": [
+    {
+      "word": "Hat",
+      "image": "/images/things/hat.png",
+      "audio": "/audio/words/hat.mp3"
+    },
+    {
+      "word": "Hen",
+      "image": "/images/things/hen.png",
+      "audio": "/audio/words/hen.mp3"
+    },
+    {
+      "word": "House",
+      "image": "/images/things/house.png",
+      "audio": "/audio/words/house.mp3"
+    }
+  ],
+  "song": {
+    "lyrics": "H is for Hat! H, H, H! Let's learn the letter H!",
+    "audio": "/audio/songs/h-song.mp3",
+    "lyricsLines": [
+      {
+        "line": "H is for ___",
+        "blankWord": "Hat",
+        "choices": [
+          "Hat",
+          "Bread",
+          "Candy"
+        ],
+        "timestamp": 2.5
+      },
+      {
+        "line": "Letter H, let's all ___",
+        "blankWord": "sing",
+        "choices": [
+          "sing",
+          "cry",
+          "sleep"
+        ],
+        "timestamp": 6
+      }
+    ]
+  },
+  "tracing": {
+    "uppercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320,
+      "transformImage": "/images/things/hat.png"
+    },
+    "lowercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320
+    }
+  },
+  "games": {
+    "memory_cards": {
+      "pairs": [
+        {
+          "word": "Hat",
+          "image": "/images/things/hat.png",
+          "audio": "/audio/words/hat.mp3"
+        },
+        {
+          "word": "Hen",
+          "image": "/images/things/hen.png",
+          "audio": "/audio/words/hen.mp3"
+        },
+        {
+          "word": "House",
+          "image": "/images/things/house.png",
+          "audio": "/audio/words/house.mp3"
+        }
+      ]
+    },
+    "letter_puzzle": {
+      "svgPath": "",
+      "pieces": 4
+    },
+    "feed_character": {
+      "correctItems": [
+        {
+          "word": "Hat",
+          "image": "/images/things/hat.png",
+          "audio": "/audio/words/hat.mp3"
+        },
+        {
+          "word": "Hen",
+          "image": "/images/things/hen.png",
+          "audio": "/audio/words/hen.mp3"
+        },
+        {
+          "word": "House",
+          "image": "/images/things/house.png",
+          "audio": "/audio/words/house.mp3"
+        }
+      ]
+    },
+    "build_word": {
+      "words": [
+        {
+          "word": "HAT",
+          "image": "/images/things/hat.png",
+          "audio": "/audio/words/hat.mp3",
+          "extraLetters": [
+            "B",
+            "C",
+            "D",
+            "F"
+          ]
+        },
+        {
+          "word": "HEN",
+          "image": "/images/things/hen.png",
+          "audio": "/audio/words/hen.mp3",
+          "extraLetters": [
+            "B",
+            "C",
+            "D",
+            "F"
+          ]
+        }
+      ]
+    },
+    "match_picture": {
+      "rounds": [
+        {
+          "letter": "H",
+          "correctImage": "/images/things/hat.png",
+          "correctWord": "Hat"
+        },
+        {
+          "letter": "H",
+          "correctImage": "/images/things/hen.png",
+          "correctWord": "Hen"
+        },
+        {
+          "letter": "H",
+          "correctImage": "/images/things/house.png",
+          "correctWord": "House"
+        }
+      ]
+    }
+  },
+  "distractors": [
+    {
+      "id": "bread",
+      "word": "Bread",
+      "image": "/images/actions/eat-bread.jpg"
+    },
+    {
+      "id": "candy",
+      "word": "Candy",
+      "image": "/images/things/candy.png"
+    },
+    {
+      "id": "chocolate",
+      "word": "Chocolate",
+      "image": "/images/things/chocolate.png"
+    },
+    {
+      "id": "tomato",
+      "word": "Tomato",
+      "image": "/images/things/tomato.png"
+    },
+    {
+      "id": "salt",
+      "word": "Salt",
+      "image": "/images/things/salt.png"
+    }
+  ],
+  "rewards": [
+    {
+      "id": "candy",
+      "type": "food",
+      "name": "Candy",
+      "image": "/images/things/candy.png",
+      "sound": "/audio/feedback/rewards/crunch.mp3",
+      "characterState": "nom_nom"
+    },
+    {
+      "id": "car",
+      "type": "toy",
+      "name": "Toy Car",
+      "image": "/images/things/car.png",
+      "sound": "/audio/feedback/rewards/vroom.mp3",
+      "characterState": "excited"
+    },
+    {
+      "id": "ice_cream",
+      "type": "food",
+      "name": "Ice Cream",
+      "image": "/images/things/icecream.png",
+      "sound": "/audio/feedback/rewards/slurp.mp3",
+      "characterState": "nom_nom"
+    }
+  ]
+}

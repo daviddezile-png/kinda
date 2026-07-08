@@ -1,0 +1,12 @@
+{
+  "welcome": 3,
+  "idle": 2,
+  "teaching": 3,
+  "pointing": 2,
+  "sad": 2,
+  "happy": 2,
+  "excited": 3,
+  "celebrating": 3,
+  "nom_nom": 2,
+  "watching": 2
+}

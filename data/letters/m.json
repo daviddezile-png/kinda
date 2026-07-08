@@ -1,0 +1,194 @@
+{
+  "letter": "M",
+  "lowercase": "m",
+  "color": "#A569BD",
+  "backgroundColor": "#F5EEF8",
+  "letterAudio": "/audio/letters/names/m.mp3",
+  "characterSpeech": {
+    "intro": "/audio/speech/m/intro.mp3",
+    "touchPrompt": "/audio/speech/m/touch-prompt.mp3",
+    "celebration": "/audio/speech/m/celebration.mp3",
+    "lowercaseIntro": "/audio/speech/m/lowercase-intro.mp3"
+  },
+  "words": [
+    {
+      "word": "Mango",
+      "image": "/images/things/mango.png",
+      "audio": "/audio/words/mango.mp3"
+    },
+    {
+      "word": "Milk",
+      "image": "/images/things/milk.png",
+      "audio": "/audio/words/milk.mp3"
+    }
+  ],
+  "song": {
+    "lyrics": "M is for Mango! M, M, M! Let's learn the letter M!",
+    "audio": "/audio/songs/m-song.mp3",
+    "lyricsLines": [
+      {
+        "line": "M is for ___",
+        "blankWord": "Mango",
+        "choices": [
+          "Candy",
+          "Mango",
+          "Bread"
+        ],
+        "timestamp": 2.5
+      },
+      {
+        "line": "Letter M, let's all ___",
+        "blankWord": "sing",
+        "choices": [
+          "sing",
+          "cry",
+          "sleep"
+        ],
+        "timestamp": 6
+      }
+    ]
+  },
+  "tracing": {
+    "uppercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320,
+      "transformImage": "/images/things/mango.png"
+    },
+    "lowercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320
+    }
+  },
+  "games": {
+    "memory_cards": {
+      "pairs": [
+        {
+          "word": "Mango",
+          "image": "/images/things/mango.png",
+          "audio": "/audio/words/mango.mp3"
+        },
+        {
+          "word": "Milk",
+          "image": "/images/things/milk.png",
+          "audio": "/audio/words/milk.mp3"
+        },
+        {
+          "word": "Bread",
+          "image": "/images/actions/eat-bread.jpg",
+          "audio": "/audio/words/bread.mp3"
+        }
+      ]
+    },
+    "letter_puzzle": {
+      "svgPath": "",
+      "pieces": 4
+    },
+    "feed_character": {
+      "correctItems": [
+        {
+          "word": "Mango",
+          "image": "/images/things/mango.png",
+          "audio": "/audio/words/mango.mp3"
+        },
+        {
+          "word": "Milk",
+          "image": "/images/things/milk.png",
+          "audio": "/audio/words/milk.mp3"
+        }
+      ]
+    },
+    "build_word": {
+      "words": [
+        {
+          "word": "MANGO",
+          "image": "/images/things/mango.png",
+          "audio": "/audio/words/mango.mp3",
+          "extraLetters": [
+            "B",
+            "C",
+            "D",
+            "F"
+          ]
+        },
+        {
+          "word": "MILK",
+          "image": "/images/things/milk.png",
+          "audio": "/audio/words/milk.mp3",
+          "extraLetters": [
+            "B",
+            "C",
+            "D",
+            "F"
+          ]
+        }
+      ]
+    },
+    "match_picture": {
+      "rounds": [
+        {
+          "letter": "M",
+          "correctImage": "/images/things/mango.png",
+          "correctWord": "Mango"
+        },
+        {
+          "letter": "M",
+          "correctImage": "/images/things/milk.png",
+          "correctWord": "Milk"
+        }
+      ]
+    }
+  },
+  "distractors": [
+    {
+      "id": "bread",
+      "word": "Bread",
+      "image": "/images/actions/eat-bread.jpg"
+    },
+    {
+      "id": "candy",
+      "word": "Candy",
+      "image": "/images/things/candy.png"
+    },
+    {
+      "id": "chocolate",
+      "word": "Chocolate",
+      "image": "/images/things/chocolate.png"
+    },
+    {
+      "id": "tomato",
+      "word": "Tomato",
+      "image": "/images/things/tomato.png"
+    },
+    {
+      "id": "salt",
+      "word": "Salt",
+      "image": "/images/things/salt.png"
+    }
+  ],
+  "rewards": [
+    {
+      "id": "candy",
+      "type": "food",
+      "name": "Candy",
+      "image": "/images/things/candy.png",
+      "sound": "/audio/feedback/rewards/crunch.mp3",
+      "characterState": "nom_nom"
+    },
+    {
+      "id": "car",
+      "type": "toy",
+      "name": "Toy Car",
+      "image": "/images/things/car.png",
+      "sound": "/audio/feedback/rewards/vroom.mp3",
+      "characterState": "excited"
+    },
+    {
+      "id": "ice_cream",
+      "type": "food",
+      "name": "Ice Cream",
+      "image": "/images/things/icecream.png",
+      "sound": "/audio/feedback/rewards/slurp.mp3",
+      "characterState": "nom_nom"
+    }
+  ]
+}

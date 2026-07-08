@@ -1,0 +1,194 @@
+{
+  "letter": "F",
+  "lowercase": "f",
+  "color": "#DDA0DD",
+  "backgroundColor": "#F8F0FF",
+  "letterAudio": "/audio/letters/names/f.mp3",
+  "characterSpeech": {
+    "intro": "/audio/speech/f/intro.mp3",
+    "touchPrompt": "/audio/speech/f/touch-prompt.mp3",
+    "celebration": "/audio/speech/f/celebration.mp3",
+    "lowercaseIntro": "/audio/speech/f/lowercase-intro.mp3"
+  },
+  "words": [
+    {
+      "word": "Fish",
+      "image": "/images/things/fish.png",
+      "audio": "/audio/words/fish.mp3"
+    },
+    {
+      "word": "Flower",
+      "image": "/images/things/flower.png",
+      "audio": "/audio/words/flower.mp3"
+    }
+  ],
+  "song": {
+    "lyrics": "F is for Fish! F, F, F! Let's learn the letter F!",
+    "audio": "/audio/songs/f-song.mp3",
+    "lyricsLines": [
+      {
+        "line": "F is for ___",
+        "blankWord": "Fish",
+        "choices": [
+          "Bread",
+          "Candy",
+          "Fish"
+        ],
+        "timestamp": 2.5
+      },
+      {
+        "line": "Letter F, let's all ___",
+        "blankWord": "sing",
+        "choices": [
+          "sing",
+          "cry",
+          "sleep"
+        ],
+        "timestamp": 6
+      }
+    ]
+  },
+  "tracing": {
+    "uppercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320,
+      "transformImage": "/images/things/fish.png"
+    },
+    "lowercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320
+    }
+  },
+  "games": {
+    "memory_cards": {
+      "pairs": [
+        {
+          "word": "Fish",
+          "image": "/images/things/fish.png",
+          "audio": "/audio/words/fish.mp3"
+        },
+        {
+          "word": "Flower",
+          "image": "/images/things/flower.png",
+          "audio": "/audio/words/flower.mp3"
+        },
+        {
+          "word": "Bread",
+          "image": "/images/actions/eat-bread.jpg",
+          "audio": "/audio/words/bread.mp3"
+        }
+      ]
+    },
+    "letter_puzzle": {
+      "svgPath": "",
+      "pieces": 4
+    },
+    "feed_character": {
+      "correctItems": [
+        {
+          "word": "Fish",
+          "image": "/images/things/fish.png",
+          "audio": "/audio/words/fish.mp3"
+        },
+        {
+          "word": "Flower",
+          "image": "/images/things/flower.png",
+          "audio": "/audio/words/flower.mp3"
+        }
+      ]
+    },
+    "build_word": {
+      "words": [
+        {
+          "word": "FISH",
+          "image": "/images/things/fish.png",
+          "audio": "/audio/words/fish.mp3",
+          "extraLetters": [
+            "B",
+            "C",
+            "D",
+            "M"
+          ]
+        },
+        {
+          "word": "FLOWER",
+          "image": "/images/things/flower.png",
+          "audio": "/audio/words/flower.mp3",
+          "extraLetters": [
+            "B",
+            "C",
+            "D",
+            "M"
+          ]
+        }
+      ]
+    },
+    "match_picture": {
+      "rounds": [
+        {
+          "letter": "F",
+          "correctImage": "/images/things/fish.png",
+          "correctWord": "Fish"
+        },
+        {
+          "letter": "F",
+          "correctImage": "/images/things/flower.png",
+          "correctWord": "Flower"
+        }
+      ]
+    }
+  },
+  "distractors": [
+    {
+      "id": "bread",
+      "word": "Bread",
+      "image": "/images/actions/eat-bread.jpg"
+    },
+    {
+      "id": "candy",
+      "word": "Candy",
+      "image": "/images/things/candy.png"
+    },
+    {
+      "id": "chocolate",
+      "word": "Chocolate",
+      "image": "/images/things/chocolate.png"
+    },
+    {
+      "id": "tomato",
+      "word": "Tomato",
+      "image": "/images/things/tomato.png"
+    },
+    {
+      "id": "salt",
+      "word": "Salt",
+      "image": "/images/things/salt.png"
+    }
+  ],
+  "rewards": [
+    {
+      "id": "candy",
+      "type": "food",
+      "name": "Candy",
+      "image": "/images/things/candy.png",
+      "sound": "/audio/feedback/rewards/crunch.mp3",
+      "characterState": "nom_nom"
+    },
+    {
+      "id": "car",
+      "type": "toy",
+      "name": "Toy Car",
+      "image": "/images/things/car.png",
+      "sound": "/audio/feedback/rewards/vroom.mp3",
+      "characterState": "excited"
+    },
+    {
+      "id": "ice_cream",
+      "type": "food",
+      "name": "Ice Cream",
+      "image": "/images/things/icecream.png",
+      "sound": "/audio/feedback/rewards/slurp.mp3",
+      "characterState": "nom_nom"
+    }
+  ]
+}

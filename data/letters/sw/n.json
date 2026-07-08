@@ -1,0 +1,199 @@
+{
+  "letter": "N",
+  "lowercase": "n",
+  "color": "#48C9B0",
+  "backgroundColor": "#E8F8F5",
+  "letterAudio": "/audio/sw/letters/n/letter-n.mp3",
+  "characterSpeech": {
+    "intro": "/audio/sw/speech/n/intro.mp3",
+    "touchPrompt": "/audio/sw/speech/n/touch-prompt.mp3",
+    "celebration": "/audio/sw/speech/n/celebration.mp3",
+    "lowercaseIntro": "/audio/sw/speech/n/lowercase-intro.mp3"
+  },
+  "words": [
+    {
+      "word": "Nyumba",
+      "image": "/images/things/house.png",
+      "audio": "/audio/sw/letters/n/nyumba.mp3"
+    },
+    {
+      "word": "Nazi",
+      "image": "/images/things/coconut.png",
+      "audio": "/audio/sw/letters/n/nazi.mp3"
+    },
+    {
+      "word": "Nyoka",
+      "image": "",
+      "audio": "/audio/sw/letters/n/nyoka.mp3"
+    }
+  ],
+  "song": {
+    "lyrics": "N ni ya Nyumba! N, N, N! Tujifunze herufi N!",
+    "audio": "/audio/sw/songs/n-song.mp3",
+    "lyricsLines": [
+      {
+        "line": "N ni ya ___",
+        "blankWord": "Nyumba",
+        "choices": [
+          "Nyumba",
+          "Chumvi",
+          "Kijiko"
+        ],
+        "timestamp": 2.5
+      },
+      {
+        "line": "Herufi N, tuimbe ___",
+        "blankWord": "pamoja",
+        "choices": [
+          "pamoja",
+          "peke",
+          "kimya"
+        ],
+        "timestamp": 6
+      }
+    ]
+  },
+  "tracing": {
+    "uppercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320,
+      "transformImage": "/images/things/house.png"
+    },
+    "lowercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320
+    }
+  },
+  "games": {
+    "memory_cards": {
+      "pairs": [
+        {
+          "word": "Nyumba",
+          "image": "/images/things/house.png",
+          "audio": "/audio/sw/letters/n/nyumba.mp3"
+        },
+        {
+          "word": "Nazi",
+          "image": "/images/things/coconut.png",
+          "audio": "/audio/sw/letters/n/nazi.mp3"
+        },
+        {
+          "word": "Chumvi",
+          "image": "/images/things/salt.png",
+          "audio": "/audio/sw/words/chumvi.mp3"
+        }
+      ]
+    },
+    "letter_puzzle": {
+      "svgPath": "",
+      "pieces": 4
+    },
+    "feed_character": {
+      "correctItems": [
+        {
+          "word": "Nyumba",
+          "image": "/images/things/house.png",
+          "audio": "/audio/sw/letters/n/nyumba.mp3"
+        },
+        {
+          "word": "Nazi",
+          "image": "/images/things/coconut.png",
+          "audio": "/audio/sw/letters/n/nazi.mp3"
+        }
+      ]
+    },
+    "build_word": {
+      "words": [
+        {
+          "word": "NYUMBA",
+          "image": "/images/things/house.png",
+          "audio": "/audio/sw/letters/n/nyumba.mp3",
+          "extraLetters": [
+            "B",
+            "K",
+            "M",
+            "S"
+          ]
+        },
+        {
+          "word": "NAZI",
+          "image": "/images/things/coconut.png",
+          "audio": "/audio/sw/letters/n/nazi.mp3",
+          "extraLetters": [
+            "B",
+            "K",
+            "M",
+            "S"
+          ]
+        }
+      ]
+    },
+    "match_picture": {
+      "rounds": [
+        {
+          "letter": "N",
+          "correctImage": "/images/things/house.png",
+          "correctWord": "Nyumba"
+        },
+        {
+          "letter": "N",
+          "correctImage": "/images/things/coconut.png",
+          "correctWord": "Nazi"
+        }
+      ]
+    }
+  },
+  "distractors": [
+    {
+      "id": "chumvi",
+      "word": "Chumvi",
+      "image": "/images/things/salt.png"
+    },
+    {
+      "id": "kijiko",
+      "word": "Kijiko",
+      "image": "/images/things/spoon.png"
+    },
+    {
+      "id": "kofia",
+      "word": "Kofia",
+      "image": "/images/things/hat.png"
+    },
+    {
+      "id": "kiatu",
+      "word": "Kiatu",
+      "image": "/images/things/shoe.png"
+    },
+    {
+      "id": "meza",
+      "word": "Meza",
+      "image": "/images/things/table.png"
+    }
+  ],
+  "rewards": [
+    {
+      "id": "candy",
+      "type": "food",
+      "name": "Peremende",
+      "image": "/images/things/candy.png",
+      "sound": "/audio/rewards/crunch.mp3",
+      "characterState": "nom_nom"
+    },
+    {
+      "id": "car",
+      "type": "toy",
+      "name": "Gari",
+      "image": "/images/things/car.png",
+      "sound": "/audio/rewards/vroom.mp3",
+      "characterState": "excited"
+    },
+    {
+      "id": "ice_cream",
+      "type": "food",
+      "name": "Aiskrimu",
+      "image": "/images/things/icecream.png",
+      "sound": "/audio/rewards/slurp.mp3",
+      "characterState": "nom_nom"
+    }
+  ]
+}

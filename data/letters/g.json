@@ -1,0 +1,209 @@
+{
+  "letter": "G",
+  "lowercase": "g",
+  "color": "#5BBFA6",
+  "backgroundColor": "#F0FBF8",
+  "letterAudio": "/audio/letters/names/g.mp3",
+  "characterSpeech": {
+    "intro": "/audio/speech/g/intro.mp3",
+    "touchPrompt": "/audio/speech/g/touch-prompt.mp3",
+    "celebration": "/audio/speech/g/celebration.mp3",
+    "lowercaseIntro": "/audio/speech/g/lowercase-intro.mp3"
+  },
+  "words": [
+    {
+      "word": "Goat",
+      "image": "/images/things/goat.png",
+      "audio": "/audio/words/goat.mp3"
+    },
+    {
+      "word": "Gate",
+      "image": "/images/things/gate.png",
+      "audio": "/audio/words/gate.mp3"
+    },
+    {
+      "word": "Guava",
+      "image": "/images/things/guava.png",
+      "audio": "/audio/words/guava.mp3"
+    }
+  ],
+  "song": {
+    "lyrics": "G is for Goat! G, G, G! Let's learn the letter G!",
+    "audio": "/audio/songs/g-song.mp3",
+    "lyricsLines": [
+      {
+        "line": "G is for ___",
+        "blankWord": "Goat",
+        "choices": [
+          "Candy",
+          "Goat",
+          "Bread"
+        ],
+        "timestamp": 2.5
+      },
+      {
+        "line": "Letter G, let's all ___",
+        "blankWord": "sing",
+        "choices": [
+          "sing",
+          "cry",
+          "sleep"
+        ],
+        "timestamp": 6
+      }
+    ]
+  },
+  "tracing": {
+    "uppercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320,
+      "transformImage": "/images/things/goat.png"
+    },
+    "lowercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320
+    }
+  },
+  "games": {
+    "memory_cards": {
+      "pairs": [
+        {
+          "word": "Goat",
+          "image": "/images/things/goat.png",
+          "audio": "/audio/words/goat.mp3"
+        },
+        {
+          "word": "Gate",
+          "image": "/images/things/gate.png",
+          "audio": "/audio/words/gate.mp3"
+        },
+        {
+          "word": "Guava",
+          "image": "/images/things/guava.png",
+          "audio": "/audio/words/guava.mp3"
+        }
+      ]
+    },
+    "letter_puzzle": {
+      "svgPath": "",
+      "pieces": 4
+    },
+    "feed_character": {
+      "correctItems": [
+        {
+          "word": "Goat",
+          "image": "/images/things/goat.png",
+          "audio": "/audio/words/goat.mp3"
+        },
+        {
+          "word": "Gate",
+          "image": "/images/things/gate.png",
+          "audio": "/audio/words/gate.mp3"
+        },
+        {
+          "word": "Guava",
+          "image": "/images/things/guava.png",
+          "audio": "/audio/words/guava.mp3"
+        }
+      ]
+    },
+    "build_word": {
+      "words": [
+        {
+          "word": "GOAT",
+          "image": "/images/things/goat.png",
+          "audio": "/audio/words/goat.mp3",
+          "extraLetters": [
+            "B",
+            "C",
+            "D",
+            "F"
+          ]
+        },
+        {
+          "word": "GATE",
+          "image": "/images/things/gate.png",
+          "audio": "/audio/words/gate.mp3",
+          "extraLetters": [
+            "B",
+            "C",
+            "D",
+            "F"
+          ]
+        }
+      ]
+    },
+    "match_picture": {
+      "rounds": [
+        {
+          "letter": "G",
+          "correctImage": "/images/things/goat.png",
+          "correctWord": "Goat"
+        },
+        {
+          "letter": "G",
+          "correctImage": "/images/things/gate.png",
+          "correctWord": "Gate"
+        },
+        {
+          "letter": "G",
+          "correctImage": "/images/things/guava.png",
+          "correctWord": "Guava"
+        }
+      ]
+    }
+  },
+  "distractors": [
+    {
+      "id": "bread",
+      "word": "Bread",
+      "image": "/images/actions/eat-bread.jpg"
+    },
+    {
+      "id": "candy",
+      "word": "Candy",
+      "image": "/images/things/candy.png"
+    },
+    {
+      "id": "chocolate",
+      "word": "Chocolate",
+      "image": "/images/things/chocolate.png"
+    },
+    {
+      "id": "tomato",
+      "word": "Tomato",
+      "image": "/images/things/tomato.png"
+    },
+    {
+      "id": "salt",
+      "word": "Salt",
+      "image": "/images/things/salt.png"
+    }
+  ],
+  "rewards": [
+    {
+      "id": "candy",
+      "type": "food",
+      "name": "Candy",
+      "image": "/images/things/candy.png",
+      "sound": "/audio/feedback/rewards/crunch.mp3",
+      "characterState": "nom_nom"
+    },
+    {
+      "id": "car",
+      "type": "toy",
+      "name": "Toy Car",
+      "image": "/images/things/car.png",
+      "sound": "/audio/feedback/rewards/vroom.mp3",
+      "characterState": "excited"
+    },
+    {
+      "id": "ice_cream",
+      "type": "food",
+      "name": "Ice Cream",
+      "image": "/images/things/icecream.png",
+      "sound": "/audio/feedback/rewards/slurp.mp3",
+      "characterState": "nom_nom"
+    }
+  ]
+}

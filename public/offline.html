@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kinda — offline</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+        background: linear-gradient(160deg, #fff5f8, #fff8e8);
+        color: #4b5563;
+        text-align: center;
+      }
+      .card {
+        background: rgba(255, 255, 255, 0.85);
+        border-radius: 2rem;
+        padding: 2.5rem 2rem;
+        margin: 1rem;
+        box-shadow: 0 24px 48px -24px rgba(80, 80, 160, 0.35);
+        max-width: 22rem;
+      }
+      img { width: 160px; height: 160px; object-fit: contain; }
+      h1 { font-size: 1.6rem; margin: 0.75rem 0 0.25rem; }
+      p { font-weight: 600; margin: 0.25rem 0 1.25rem; }
+      button {
+        border: 0;
+        border-radius: 999px;
+        padding: 0.9rem 2.2rem;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #fff;
+        background: linear-gradient(90deg, #ff6b9d, #ffc24a);
+        box-shadow: 0 12px 24px -8px rgba(255, 107, 157, 0.6);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <img src="/images/character/3d/sad-1.png" alt="" onerror="this.style.display='none'" />
+      <h1>Oops — no internet!</h1>
+      <p>Pages you have visited before still work. Try again when you are back online.</p>
+      <button onclick="location.reload()">Try again</button>
+    </div>
+  </body>
+</html>

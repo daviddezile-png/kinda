@@ -1,0 +1,209 @@
+{
+  "letter": "P",
+  "lowercase": "p",
+  "color": "#EC407A",
+  "backgroundColor": "#FCE4EC",
+  "letterAudio": "/audio/letters/names/p.mp3",
+  "characterSpeech": {
+    "intro": "/audio/speech/p/intro.mp3",
+    "touchPrompt": "/audio/speech/p/touch-prompt.mp3",
+    "celebration": "/audio/speech/p/celebration.mp3",
+    "lowercaseIntro": "/audio/speech/p/lowercase-intro.mp3"
+  },
+  "words": [
+    {
+      "word": "Pineapple",
+      "image": "/images/things/pineapple.png",
+      "audio": "/audio/words/pineapple.mp3"
+    },
+    {
+      "word": "Pen",
+      "image": "/images/things/pen.png",
+      "audio": "/audio/words/pen.mp3"
+    },
+    {
+      "word": "Papaya",
+      "image": "/images/things/papaya.png",
+      "audio": "/audio/words/papaya.mp3"
+    }
+  ],
+  "song": {
+    "lyrics": "P is for Pineapple! P, P, P! Let's learn the letter P!",
+    "audio": "/audio/songs/p-song.mp3",
+    "lyricsLines": [
+      {
+        "line": "P is for ___",
+        "blankWord": "Pineapple",
+        "choices": [
+          "Candy",
+          "Pineapple",
+          "Bread"
+        ],
+        "timestamp": 2.5
+      },
+      {
+        "line": "Letter P, let's all ___",
+        "blankWord": "sing",
+        "choices": [
+          "sing",
+          "cry",
+          "sleep"
+        ],
+        "timestamp": 6
+      }
+    ]
+  },
+  "tracing": {
+    "uppercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320,
+      "transformImage": "/images/things/pineapple.png"
+    },
+    "lowercase": {
+      "canvasWidth": 320,
+      "canvasHeight": 320
+    }
+  },
+  "games": {
+    "memory_cards": {
+      "pairs": [
+        {
+          "word": "Pineapple",
+          "image": "/images/things/pineapple.png",
+          "audio": "/audio/words/pineapple.mp3"
+        },
+        {
+          "word": "Pen",
+          "image": "/images/things/pen.png",
+          "audio": "/audio/words/pen.mp3"
+        },
+        {
+          "word": "Papaya",
+          "image": "/images/things/papaya.png",
+          "audio": "/audio/words/papaya.mp3"
+        }
+      ]
+    },
+    "letter_puzzle": {
+      "svgPath": "",
+      "pieces": 4
+    },
+    "feed_character": {
+      "correctItems": [
+        {
+          "word": "Pineapple",
+          "image": "/images/things/pineapple.png",
+          "audio": "/audio/words/pineapple.mp3"
+        },
+        {
+          "word": "Pen",
+          "image": "/images/things/pen.png",
+          "audio": "/audio/words/pen.mp3"
+        },
+        {
+          "word": "Papaya",
+          "image": "/images/things/papaya.png",
+          "audio": "/audio/words/papaya.mp3"
+        }
+      ]
+    },
+    "build_word": {
+      "words": [
+        {
+          "word": "PEN",
+          "image": "/images/things/pen.png",
+          "audio": "/audio/words/pen.mp3",
+          "extraLetters": [
+            "B",
+            "C",
+            "D",
+            "F"
+          ]
+        },
+        {
+          "word": "PAPAYA",
+          "image": "/images/things/papaya.png",
+          "audio": "/audio/words/papaya.mp3",
+          "extraLetters": [
+            "B",
+            "C",
+            "D",
+            "F"
+          ]
+        }
+      ]
+    },
+    "match_picture": {
+      "rounds": [
+        {
+          "letter": "P",
+          "correctImage": "/images/things/pineapple.png",
+          "correctWord": "Pineapple"
+        },
+        {
+          "letter": "P",
+          "correctImage": "/images/things/pen.png",
+          "correctWord": "Pen"
+        },
+        {
+          "letter": "P",
+          "correctImage": "/images/things/papaya.png",
+          "correctWord": "Papaya"
+        }
+      ]
+    }
+  },
+  "distractors": [
+    {
+      "id": "bread",
+      "word": "Bread",
+      "image": "/images/actions/eat-bread.jpg"
+    },
+    {
+      "id": "candy",
+      "word": "Candy",
+      "image": "/images/things/candy.png"
+    },
+    {
+      "id": "chocolate",
+      "word": "Chocolate",
+      "image": "/images/things/chocolate.png"
+    },
+    {
+      "id": "tomato",
+      "word": "Tomato",
+      "image": "/images/things/tomato.png"
+    },
+    {
+      "id": "salt",
+      "word": "Salt",
+      "image": "/images/things/salt.png"
+    }
+  ],
+  "rewards": [
+    {
+      "id": "candy",
+      "type": "food",
+      "name": "Candy",
+      "image": "/images/things/candy.png",
+      "sound": "/audio/feedback/rewards/crunch.mp3",
+      "characterState": "nom_nom"
+    },
+    {
+      "id": "car",
+      "type": "toy",
+      "name": "Toy Car",
+      "image": "/images/things/car.png",
+      "sound": "/audio/feedback/rewards/vroom.mp3",
+      "characterState": "excited"
+    },
+    {
+      "id": "ice_cream",
+      "type": "food",
+      "name": "Ice Cream",
+      "image": "/images/things/icecream.png",
+      "sound": "/audio/feedback/rewards/slurp.mp3",
+      "characterState": "nom_nom"
+    }
+  ]
+}
