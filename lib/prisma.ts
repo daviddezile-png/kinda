@@ -11,7 +11,12 @@ function createClient(): PrismaClient {
   if (!url) {
     throw new Error("DATABASE_URL is not set — see .env (mysql://user:pass@host:port/db)")
   }
-  const adapter = new PrismaMariaDb(url)
+  // MySQL 8's default caching_sha2_password auth plugin needs to fetch the
+  // server's RSA public key over an unencrypted local connection; the driver
+  // refuses to do this unless explicitly allowed.
+  const parsedUrl = new URL(url)
+  parsedUrl.searchParams.set("allowPublicKeyRetrieval", "true")
+  const adapter = new PrismaMariaDb(parsedUrl.toString())
   return new PrismaClient({ adapter })
 }
 
