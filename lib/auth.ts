@@ -3,6 +3,10 @@ import CredentialsProvider from "next-auth/providers/credentials"
 import bcrypt from "bcryptjs"
 import { prisma } from "./prisma"
 
+function normalizeEmail(value?: string | null) {
+  return value?.trim().toLowerCase() ?? ""
+}
+
 // NextAuth v4 (see SPEC-DEVIATIONS.md). Credentials + JWT sessions — no adapter
 // (the Prisma adapter is for OAuth/database sessions, not credentials+JWT).
 // Teachers and admins sign in with email + password.
@@ -17,26 +21,34 @@ export const authOptions: NextAuthOptions = {
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
-        if (!credentials?.email || !credentials?.password) return null
+        const email = normalizeEmail(credentials?.email)
+        const password = credentials?.password
 
-        const user = await prisma.user.findUnique({
-          where: { email: credentials.email },
-          include: { school: true },
-        })
-        if (!user) return null
-        // A suspended account can no longer sign in (admin control).
-        if (!user.isActive) return null
+        if (!email || !password) return null
 
-        const valid = await bcrypt.compare(credentials.password, user.password)
-        if (!valid) return null
+        try {
+          const user = await prisma.user.findUnique({
+            where: { email },
+            include: { school: true },
+          })
+          if (!user) return null
+          // A suspended account can no longer sign in (admin control).
+          if (!user.isActive) return null
 
-        return {
-          id: user.id,
-          name: user.name,
-          email: user.email,
-          role: user.role,
-          schoolId: user.schoolId, // null for the super-admin
-          schoolName: user.school?.name ?? null,
+          const valid = await bcrypt.compare(password, user.password)
+          if (!valid) return null
+
+          return {
+            id: user.id,
+            name: user.name,
+            email: user.email,
+            role: user.role,
+            schoolId: user.schoolId, // null for the super-admin
+            schoolName: user.school?.name ?? null,
+          }
+        } catch (error) {
+          console.error("NextAuth authorize failed", error)
+          return null
         }
       },
     }),
