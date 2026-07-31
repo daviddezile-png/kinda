@@ -7,6 +7,8 @@ import { prisma } from "./prisma"
 // (the Prisma adapter is for OAuth/database sessions, not credentials+JWT).
 // Teachers and admins sign in with email + password.
 export const authOptions: NextAuthOptions = {
+  secret: process.env.NEXTAUTH_SECRET ?? "dev-only-change-me-2f8a1c9b4e7d6035a1f2",
+  trustHost: true,
   providers: [
     CredentialsProvider({
       name: "credentials",

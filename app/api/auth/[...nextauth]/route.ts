@@ -1,6 +1,10 @@
 import NextAuth from "next-auth"
 import { authOptions } from "@/lib/auth"
 
+export const runtime = "nodejs"
+export const dynamic = "force-dynamic"
+export const revalidate = 0
+
 // NextAuth v4 route handler (App Router). See SPEC-DEVIATIONS.md.
 const handler = NextAuth(authOptions)
 
