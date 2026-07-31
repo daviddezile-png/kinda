@@ -70,7 +70,7 @@ export async function deleteClass(classId: string) {
   if (!klass || !klass.archived) return
 
   const students = await prisma.student.findMany({ where: { classId }, select: { id: true } })
-  const studentIds = students.map((s) => s.id)
+  const studentIds = students.map((student: { id: string }) => student.id)
 
   await prisma.$transaction([
     prisma.progress.deleteMany({ where: { studentId: { in: studentIds } } }),
