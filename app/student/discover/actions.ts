@@ -22,16 +22,16 @@ export async function completeWordJourney() {
   const now = new Date()
 
   await Promise.all(
-    items.map((it) =>
+    items.map((item: { letter: string }) =>
       prisma.progress.upsert({
         where: {
-          studentId_module_itemId_step: { studentId, module: "READING", itemId: it.letter, step: 0 },
+          studentId_module_itemId_step: { studentId, module: "READING", itemId: item.letter, step: 0 },
         },
         update: { completed: true, completedAt: now, stars: 1, attempts: { increment: 1 } },
         create: {
           studentId,
           module: "READING",
-          itemId: it.letter,
+          itemId: item.letter,
           step: 0,
           completed: true,
           completedAt: now,
