@@ -33,6 +33,7 @@ import {
   onSpeakingChange,
   playInstruction,
   speakNumber,
+  speakWord,
   stopVoice,
 } from "@/lib/audio"
 import type { CharacterState, Reward } from "@/types"
@@ -86,7 +87,11 @@ export function NumberLessonClient({ data }: NumberLessonClientProps) {
   const giftQueue = useRef<Reward[]>([])
   const giveGift = useCallback(() => {
     if (giftQueue.current.length === 0) giftQueue.current = shuffle(ALL_REWARDS)
-    rewardRef.current?.giveReward(giftQueue.current.shift())
+    const gift = giftQueue.current.shift()
+    rewardRef.current?.giveReward(gift)
+    // Say which gift the child got ("Apple!"), like the letters lesson. The
+    // game's own win cheer has already finished by the time a gift is given.
+    if (gift) speakWord(gift.name)
   }, [])
 
   const nudge = useRef<ReturnType<typeof setInterval> | null>(null)

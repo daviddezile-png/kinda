@@ -12,8 +12,9 @@ import { Confetti } from "@/components/ui/Confetti"
 import { MuteToggle } from "@/components/ui/MuteToggle"
 import { DiscoverGallery, type GalleryFrame } from "@/components/discover/DiscoverGallery"
 import { MadamWelcome } from "@/components/discover/MadamWelcome"
-import { playCompletion, playInstruction } from "@/lib/audio"
+import { playCompletion, playInstruction, speakWord } from "@/lib/audio"
 import { playSound } from "@/lib/playSound"
+import type { Reward } from "@/types"
 
 interface DiscoverAllClientProps {
   images: GalleryFrame[]
@@ -40,22 +41,27 @@ export function DiscoverAllClient({ images, onComplete }: DiscoverAllClientProps
   // Bumped on repeat to force DiscoverGallery to remount with fresh state.
   const [tourKey, setTourKey] = useState(0)
 
+  const gift = useRef<Reward | null>(null)
+
   const handleAllSeen = () => {
     if (done) return
     setDone(true)
-    rewardRef.current?.giveReward()
+    gift.current = rewardRef.current?.giveReward() ?? null
   }
 
   useEffect(() => {
     if (!done) return
-    // Celebrate first — a cheer over the clapping — and only once the applause
-    // has finished do we switch to the teacher pointing at the buttons and tell
-    // the child which one does what, so the instruction and the pointing gesture
-    // never land while the celebration is still going.
-    playCompletion()
-    playSound("/audio/feedback/applause-wav.mp3", 0.9, () => {
-      setGuide(true)
-      playInstruction("step0/discover-end")
+    // Name the gift the child just got ("Apple!") — like the letters lesson —
+    // then celebrate: a cheer over the clapping, and only once the applause has
+    // finished do we switch to the teacher pointing at the buttons and tell the
+    // child which one does what, so nothing lands while the celebration is still
+    // going. (speakWord with no name just calls straight through.)
+    speakWord(gift.current?.name, () => {
+      playCompletion()
+      playSound("/audio/feedback/applause-wav.wav", 0.9, () => {
+        setGuide(true)
+        playInstruction("step0/discover-end")
+      })
     })
   }, [done])
 

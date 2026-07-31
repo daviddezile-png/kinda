@@ -218,6 +218,25 @@ export const speakCapitalLetter = (letter?: string, onend?: () => void): void =>
 export const speakSmallLetter = (letter?: string, onend?: () => void): void =>
   playVoice(letter ? `${BASE}/letters/small/${letter.toLowerCase()}.mp3` : undefined, onend)
 
+// Sound a word out letter-by-letter (phonics sounds), then say the whole word —
+// "b… a… ll… ball!". Used by the Words module to teach how letters join and
+// blend into a word. One voice at a time, with a short beat between sounds.
+export function spellThenSay(word?: string, onend?: () => void): void {
+  const letters = (word ?? "").replace(/[^a-zA-Z]/g, "").split("")
+  if (letters.length === 0) {
+    onend?.()
+    return
+  }
+  const step = (i: number): void => {
+    if (i >= letters.length) {
+      speakWord(word, onend)
+      return
+    }
+    speakLetterSound(letters[i], () => setTimeout(() => step(i + 1), 260))
+  }
+  step(0)
+}
+
 // ── Feedback pools (random pick keeps it fresh) ───────────────────────────
 const POSITIVE = [
   "amazing", "brilliant", "excellent", "fantastic", "great-job", "hooray",

@@ -73,6 +73,17 @@ export default async function StudentHomePage() {
         </Link>
 
         <Link
+          href="/student/words"
+          aria-label={`Make words, ${student.name}`}
+          className="group flex flex-col items-center justify-center gap-1.5 rounded-[1.75rem] bg-linear-to-br from-[#c39bf5] to-[#9b6ef0] px-4 py-5 shadow-[0_18px_38px_-16px_rgba(155,110,240,0.7)] ring-4 ring-white/60 transition-transform active:scale-95 sm:hover:-translate-y-1"
+        >
+          <span className="text-4xl font-black tracking-tight text-white drop-shadow-md sm:text-5xl">a-b-c</span>
+          <span className="rounded-full bg-white/25 px-4 py-0.5 text-sm font-black text-white sm:text-base">
+            Words
+          </span>
+        </Link>
+
+        <Link
           href="/student/journey"
           aria-label={`Picture journey, ${student.name}`}
           className="group col-span-2 flex flex-col items-center justify-center gap-1.5 rounded-[1.75rem] bg-linear-to-br from-[#8ee6b8] to-[#34c98f] px-4 py-5 shadow-[0_18px_38px_-16px_rgba(52,201,143,0.7)] ring-4 ring-white/60 transition-transform active:scale-95 sm:col-span-1 sm:hover:-translate-y-1"

@@ -22,7 +22,7 @@ import { GameCompletionScreen } from "@/components/games/GameCompletionScreen"
 import { shuffle } from "@/lib/utils"
 import { useLanguage } from "@/store/languageStore"
 import { getPhrases } from "@/lib/i18n"
-import { playInstruction } from "@/lib/audio"
+import { playInstruction, playPositive, speakWord } from "@/lib/audio"
 import type { LetterData, Reward } from "@/types"
 import type { GameProps } from "./gameTypes"
 
@@ -89,6 +89,16 @@ export function GameSelector({ letterData }: GameSelectorProps) {
     if (introDone && !finished) playInstruction(index === 0 ? "games/lets-play" : "games/here-we-go")
   }, [index, finished, introDone])
 
+  // A game earned the child a gift: fly it in, then cheer and NAME it out loud
+  // ("Great job! … Apple!") — the same "say which gift you got" the letters
+  // lesson does. Every game routes its reward through here so the announcement
+  // is consistent (games no longer speak their own praise on a win). When a gift
+  // is already flying, giveReward returns undefined and we stay quiet.
+  const handleReward = () => {
+    const gift = rewardRef.current?.giveReward()
+    if (gift) playPositive(() => speakWord(gift.name))
+  }
+
   const handleComplete = (gameStars: number) => {
     setStars((prev) => prev + gameStars)
     if (index + 1 < chosen.length) setIndex((i) => i + 1)
@@ -103,7 +113,9 @@ export function GameSelector({ letterData }: GameSelectorProps) {
       <RewardChest ref={chestRef} rewards={rewards} />
       <PlayfulBackground />
 
-      <header className="relative z-10 flex items-center gap-4 px-4 py-3">
+      {/* pr-20 reserves room for the fixed reward chest in the top-right corner
+          so the mute toggle never sits underneath it. */}
+      <header className="relative z-10 flex items-center gap-4 px-4 py-3 pr-20">
         <Link href="/student" className="rounded-full bg-white/70 px-4 py-2 text-sm font-bold text-gray-600">
           <span className="inline-flex items-center gap-1.5"><Decor name="home" size={18} />{t.home}</span>
         </Link>
@@ -132,7 +144,7 @@ export function GameSelector({ letterData }: GameSelectorProps) {
                 <CurrentGame
                   key={index}
                   letterData={letterData}
-                  onReward={() => rewardRef.current?.giveReward()}
+                  onReward={handleReward}
                   onComplete={handleComplete}
                 />
               </div>

@@ -80,6 +80,16 @@ export default async function TeacherDashboard() {
               <p className="text-xl font-black text-gray-700">{klass.name}</p>
               <p className="mt-1 text-3xl font-black text-pink-500">{klass.students.length}</p>
               <p className="text-sm text-gray-400">students</p>
+
+              {/* Join code, right on the class card so the teacher can read it
+                  out for students to enter on their device at /student/join. */}
+              {klass.code && (
+                <div className="mt-4 border-t border-gray-100 pt-3">
+                  <p className="text-xs font-bold uppercase tracking-wide text-gray-400">Class code</p>
+                  <p className="font-mono text-2xl font-black tracking-widest text-indigo-600">{klass.code}</p>
+                  <p className="text-xs text-gray-400">Students enter this at /student/join</p>
+                </div>
+              )}
             </div>
 
             <div className="rounded-3xl bg-white/80 p-5 shadow-lg md:col-span-2">

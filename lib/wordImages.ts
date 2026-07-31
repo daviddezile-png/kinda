@@ -140,6 +140,7 @@ const IMAGES: Record<string, string> = {
   "window": "/images/things/window.png",
   "wolf": "/images/things/wolf.png",
   "x ray": "/images/things/x-ray.png",
+  "xray": "/images/things/x-ray.png",
   "xylocopa": "/images/things/xylocopa.png",
   "yak": "/images/things/yak.png",
   "yam": "/images/things/yam.png",

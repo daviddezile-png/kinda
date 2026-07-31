@@ -12,7 +12,7 @@ import { RewardSystem, type RewardSystemRef } from "@/components/rewards/RewardS
 import { RewardChest, type RewardChestRef } from "@/components/rewards/RewardChest"
 import { DISTRACTORS } from "@/data/distractors"
 import { playSound } from "@/lib/playSound"
-import { playCompletion, playEncouraging, playInstruction, playPositive, playUi } from "@/lib/audio"
+import { playCompletion, playEncouraging, playInstruction, playPositive, playUi, speakWord } from "@/lib/audio"
 import { shuffle } from "@/lib/utils"
 import { calculateStars, useStep2Store } from "@/store/gameStore"
 import { PlayfulBackground } from "@/components/ui/PlayfulBackground"
@@ -111,8 +111,10 @@ export function RecognitionGame({ letterData }: RecognitionGameProps) {
         setResult({ uid: card.uid, correct: true })
         setCharacter("celebrating")
         playSound("/audio/feedback/correct.mp3")
-        playPositive()
-        rewardRef.current?.giveReward()
+        // Fly in the gift, then cheer and NAME it ("Great job! … Apple!") — the
+        // same "say which gift you got" the letters lesson does.
+        const gift = rewardRef.current?.giveReward()
+        playPositive(gift ? () => speakWord(gift.name) : undefined)
 
         schedule(() => {
           if (round >= TOTAL_ROUNDS) {
@@ -163,7 +165,9 @@ export function RecognitionGame({ letterData }: RecognitionGameProps) {
       <RewardChest ref={chestRef} rewards={earnedRewards} />
       <PlayfulBackground />
 
-      <header className="relative z-10 flex items-center justify-between px-4 py-3">
+      {/* pr-20 reserves room for the fixed reward chest in the top-right corner
+          so the mute toggle never sits underneath it. */}
+      <header className="relative z-10 flex items-center justify-between px-4 py-3 pr-20">
         <Link href="/student" className="rounded-full bg-white/70 px-4 py-2 text-sm font-bold text-gray-600">
           <span className="inline-flex items-center gap-1.5"><Decor name="home" size={18} />{t.home}</span>
         </Link>

@@ -89,9 +89,22 @@ export function LevelIntro({ lines, onDone, once }: LevelIntroProps) {
         doneRef.current()
       })
     }
-    const off = whenUnlocked(begin)
+    // Defer the actual start by a tick. When audio is ALREADY unlocked (the
+    // child tapped their way in from the map), whenUnlocked would otherwise run
+    // begin() synchronously inside this effect — and in dev, React Strict Mode
+    // mounts → cleans up → mounts again, so the greeting would start, get
+    // stopVoice()'d by the throw-away cleanup, and never restart (the `started`
+    // guard blocks it) — a silent, frozen welcome. Deferring lets the throw-away
+    // mount's cleanup cancel the pending start before it fires; the real mount
+    // then starts it exactly once. (On a fresh load audio is locked, so begin
+    // waits for the unlock tap and this timer never even arms early.)
+    let kick: ReturnType<typeof setTimeout> | null = null
+    const off = whenUnlocked(() => {
+      kick = setTimeout(begin, 0)
+    })
     return () => {
       off()
+      if (kick) clearTimeout(kick)
       // Only silence the greeting if we were interrupted mid-intro (e.g. the
       // child left the page). On a normal finish the lesson's FIRST line has
       // already started — stopping voice here would kill it and, since a

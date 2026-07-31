@@ -10,8 +10,10 @@ import type { RewardChestRef } from "./RewardChest"
 
 export interface RewardSystemRef {
   /** Fly a gift into the basket. Pass a specific reward to control which gift is
-   *  shown/named (Level 1 announces it by name); omit for a random one. */
-  giveReward: (reward?: Reward) => void
+   *  shown/named (Level 1 announces it by name); omit for a random one. Returns
+   *  the gift that was given so the caller can speak its name — or `undefined`
+   *  when a gift is already flying (the call is ignored, so nothing to name). */
+  giveReward: (reward?: Reward) => Reward | undefined
 }
 
 interface RewardSystemProps {
@@ -27,8 +29,8 @@ export const RewardSystem = forwardRef<RewardSystemRef, RewardSystemProps>(funct
   const isAnimating = useRef(false)
 
   useImperativeHandle(ref, () => ({
-    giveReward: (reward?: Reward) => {
-      if (isAnimating.current) return
+    giveReward: (reward?: Reward): Reward | undefined => {
+      if (isAnimating.current) return undefined
       isAnimating.current = true
 
       const chosen = reward ?? randomFrom(ALL_REWARDS)
@@ -42,6 +44,7 @@ export const RewardSystem = forwardRef<RewardSystemRef, RewardSystemProps>(funct
         chestRef.current?.shake()
         onRewardGiven(chosen)
       }, 2800)
+      return chosen
     },
   }))
 

@@ -6,7 +6,7 @@ import { TracingCanvas } from "@/components/tracing/TracingCanvas"
 import { Character3D } from "@/components/character/Character3D"
 import { Picture } from "@/components/ui/Picture"
 import { Decor } from "@/components/ui/Decor"
-import { playPositive, speakWord } from "@/lib/audio"
+import { speakWord } from "@/lib/audio"
 import { useLanguage } from "@/store/languageStore"
 import { getPhrases } from "@/lib/i18n"
 import type { CharacterState } from "@/types"
@@ -59,8 +59,9 @@ export function SeeAndWrite({ letterData, onReward, onComplete }: GameProps) {
   }
 
   const handleLetterDone = () => {
+    // The win cheer + gift name come from onReward (GameSelector); here we just
+    // celebrate visually and move on, so the gift's name is never cut short.
     setCharacter("celebrating")
-    playPositive()
     setTimeout(() => {
       if (ri + 1 < rounds.length) {
         setCharacter("pointing")

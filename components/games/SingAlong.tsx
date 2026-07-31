@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import { Character3D } from "@/components/character/Character3D"
 import { shuffle } from "@/lib/utils"
 import { playSound } from "@/lib/playSound"
-import { playEncouraging, playPositive } from "@/lib/audio"
+import { playEncouraging } from "@/lib/audio"
 import { useLanguage } from "@/store/languageStore"
 import { getPhrases } from "@/lib/i18n"
 import type { GameProps } from "./gameTypes"
@@ -25,8 +25,8 @@ export function SingAlong({ letterData, onReward, onComplete }: GameProps) {
   const choose = (choice: string) => {
     if (!line) return
     if (choice === line.blankWord) {
+      // onReward (GameSelector) cheers and names the gift — no praise here.
       onReward()
-      playPositive()
       if (li + 1 < lines.length) {
         setLi(li + 1)
       } else {

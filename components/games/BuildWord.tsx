@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { shuffle } from "@/lib/utils"
 import { playSound } from "@/lib/playSound"
-import { playEncouraging, playPositive } from "@/lib/audio"
+import { playEncouraging } from "@/lib/audio"
 import { Picture } from "@/components/ui/Picture"
 import { useLanguage } from "@/store/languageStore"
 import { getPhrases } from "@/lib/i18n"
@@ -44,9 +44,9 @@ export function BuildWord({ letterData, onReward, onComplete }: GameProps) {
       setUsed((u) => [...u, tile.id])
       playSound("/audio/games/pop.mp3")
       if (f.length === word.word.length) {
+        // onReward (GameSelector) cheers and names the gift — no praise here.
         onReward()
         playSound("/audio/games/word-complete.mp3")
-        playPositive()
         setTimeout(() => {
           if (wi + 1 < words.length) setWi(wi + 1)
           else onComplete(3)

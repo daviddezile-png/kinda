@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import { DISTRACTORS } from "@/data/distractors"
 import { shuffle } from "@/lib/utils"
 import { playSound } from "@/lib/playSound"
-import { playEncouraging, playPositive } from "@/lib/audio"
+import { playEncouraging } from "@/lib/audio"
 import { Picture } from "@/components/ui/Picture"
 import { useLanguage } from "@/store/languageStore"
 import { getPhrases } from "@/lib/i18n"
@@ -38,7 +38,7 @@ export function MatchPicture({ letterData, onReward, onComplete }: GameProps) {
   const tap = (o: Option) => {
     if (o.correct) {
       playSound("/audio/feedback/correct.mp3")
-      playPositive()
+      // onReward (GameSelector) cheers and names the gift — no praise here.
       onReward()
       setTimeout(() => {
         if (ri + 1 < rounds.length) setRi(ri + 1)

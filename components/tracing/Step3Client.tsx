@@ -12,7 +12,7 @@ import { Decor } from "@/components/ui/Decor"
 import { LevelIntro } from "@/components/ui/LevelIntro"
 import { MuteToggle } from "@/components/ui/MuteToggle"
 import { playSound } from "@/lib/playSound"
-import { playCompletion, playInstruction, playUi } from "@/lib/audio"
+import { playCompletion, playInstruction, playUi, speakWord } from "@/lib/audio"
 import { PlayfulBackground } from "@/components/ui/PlayfulBackground"
 import { FinishButton } from "@/components/student/FinishButton"
 import { Confetti } from "@/components/ui/Confetti"
@@ -62,7 +62,10 @@ export function Step3Client({ letterData }: Step3ClientProps) {
   const handleSection = useCallback(() => {
     setCharacter("happy")
     playSound("/audio/feedback/correct.mp3")
-    rewardRef.current?.giveReward()
+    // Fly in the gift and say which one it is ("Apple!") — same as the letters
+    // lesson. giveReward returns undefined when a gift is already flying.
+    const gift = rewardRef.current?.giveReward()
+    if (gift) speakWord(gift.name)
   }, [])
 
   const handleRewardGiven = useCallback((reward: Reward) => {
@@ -113,7 +116,9 @@ export function Step3Client({ letterData }: Step3ClientProps) {
       <RewardChest ref={chestRef} rewards={rewards} />
       <PlayfulBackground />
 
-      <header className="relative z-10 flex items-center gap-4 px-4 py-3">
+      {/* pr-20 reserves room for the fixed reward chest in the top-right corner
+          so the mute toggle never sits underneath it. */}
+      <header className="relative z-10 flex items-center gap-4 px-4 py-3 pr-20">
         <Link href="/student" className="rounded-full bg-white/70 px-4 py-2 text-sm font-bold text-gray-600">
           <span className="inline-flex items-center gap-1.5"><Decor name="home" size={18} />{t.home}</span>
         </Link>

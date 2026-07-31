@@ -43,7 +43,7 @@ const LETTER_INDEX = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 // A short, attractive "you pressed it" cue (not a reward/gift sound). File may be
 // absent — playSound swallows a 404, so touching still feels responsive silently.
 const TOUCH_SFX = "/audio/sfx/touch.mp3"
-const APPLAUSE = "/audio/feedback/applause-wav.mp3"
+const APPLAUSE = "/audio/feedback/applause-wav.wav"
 
 // Timing that keeps voices from ever overlapping and gives the child room to
 // respond. One person can't speak two lines at once, so every spoken line is
@@ -586,7 +586,22 @@ export function Step1Client({ letterData }: Step1ClientProps) {
       setLocked(false)
       schedule(startTeachCapital, 500)
     }
-    return whenUnlocked(begin)
+    // Defer the kickoff by a tick. When audio is ALREADY unlocked (the child
+    // tapped their way in from the map) whenUnlocked runs begin() synchronously,
+    // and in dev React Strict Mode's mount → cleanup → mount would start the
+    // lesson then tear its opening timer down (via the reset effect's cleanup)
+    // with the `started` guard blocking a restart — a frozen, silent letter.
+    // Deferring lets the throw-away mount cancel the pending start; the real
+    // mount then fires it once. (A fresh load is locked, so this waits for the
+    // unlock tap and never arms early.)
+    let kick: ReturnType<typeof setTimeout> | null = null
+    const off = whenUnlocked(() => {
+      kick = setTimeout(begin, 0)
+    })
+    return () => {
+      off()
+      if (kick) clearTimeout(kick)
+    }
   }, [schedule, startTeachCapital])
 
   // Manual "start the whole letter again" from the celebration buttons.
