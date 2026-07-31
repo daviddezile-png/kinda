@@ -13,11 +13,31 @@ import { LogoutButton } from "@/components/teacher/LogoutButton"
 // and teachers never see each other — only this page sees them all.
 export const dynamic = "force-dynamic"
 
+interface AdminSchool {
+  id: string
+  name: string
+  email: string
+  _count: {
+    users: number
+    classes: number
+  }
+}
+
+interface AdminTeacher {
+  id: string
+  name: string | null
+  email: string | null
+  isActive: boolean
+  school: {
+    name: string
+  } | null
+}
+
 export default async function AdminPage() {
   const session = await getAdminSession()
   if (!session) redirect("/auth/login")
 
-  const [schools, teachers] = await Promise.all([
+  const [schools, teachers] = (await Promise.all([
     prisma.school.findMany({
       orderBy: { createdAt: "asc" },
       include: { _count: { select: { users: true, classes: true } } },
@@ -27,7 +47,7 @@ export default async function AdminPage() {
       orderBy: { createdAt: "asc" },
       include: { school: { select: { name: true } } },
     }),
-  ])
+  ])) as [AdminSchool[], AdminTeacher[]]
 
   const schoolOptions = schools.map((s) => ({ id: s.id, name: s.name }))
   const card = "rounded-3xl bg-white/85 p-5 shadow-lg"
