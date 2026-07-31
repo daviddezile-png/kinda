@@ -23,8 +23,7 @@ const item = {
 }
 
 export function LessonPath({ items, sequential }: { items: PathItem[]; sequential: boolean }) {
-  const [done, setDone] = useState<string[]>([])
-  useEffect(() => setDone(getCompletedLetters()), [])
+  const [done] = useState<string[]>(() => getCompletedLetters())
   // Friendly spoken greeting when the child lands on their lesson map.
   useEffect(() => playUi("welcome-back"), [])
 

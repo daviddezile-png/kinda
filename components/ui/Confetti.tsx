@@ -9,20 +9,25 @@ interface ConfettiProps {
   count?: number
 }
 
+function seeded(seed: number) {
+  const x = Math.sin(seed) * 10000
+  return x - Math.floor(x)
+}
+
 // Celebratory confetti rain — drop it onto any completion screen.
 export function Confetti({ count = 44 }: ConfettiProps) {
   const pieces = useMemo(
     () =>
       Array.from({ length: count }).map((_, i) => ({
         id: i,
-        left: Math.random() * 100,
-        delay: Math.random() * 0.8,
-        duration: 2.4 + Math.random() * 2,
+        left: seeded(i * 7 + count) * 100,
+        delay: seeded(i * 11 + count) * 0.8,
+        duration: 2.4 + seeded(i * 13 + count) * 2,
         color: COLORS[i % COLORS.length],
-        rotate: Math.random() * 360,
-        size: 8 + Math.random() * 8,
-        drift: (Math.random() - 0.5) * 140,
-        round: Math.random() > 0.5,
+        rotate: seeded(i * 17 + count) * 360,
+        size: 8 + seeded(i * 19 + count) * 8,
+        drift: (seeded(i * 23 + count) - 0.5) * 140,
+        round: seeded(i * 29 + count) > 0.5,
       })),
     [count],
   )

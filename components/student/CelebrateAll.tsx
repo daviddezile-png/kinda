@@ -25,12 +25,8 @@ export function CelebrateAll({ studentName, avatarImage, avatarLabel }: Celebrat
   const [pending, startTransition] = useTransition()
   const started = useRef(false)
   const [showButton, setShowButton] = useState(false)
-  // Confetti places pieces with Math.random(), so render it only after mount —
-  // otherwise the server and client trees disagree (hydration mismatch).
-  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    setMounted(true)
     if (started.current) return
     started.current = true
     playSound("/audio/feedback/applause.wav", 0.9)
@@ -55,7 +51,7 @@ export function CelebrateAll({ studentName, avatarImage, avatarLabel }: Celebrat
   return (
     <div className="relative flex h-dvh flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-[#fff7e6] to-[#ffe9f3] px-4">
       <PlayfulBackground />
-      {mounted && <Confetti count={60} />}
+      <Confetti count={60} />
 
       <div className="relative z-10 flex flex-col items-center gap-4 sm:gap-6">
         {/* Teacher and the child's character celebrating together */}

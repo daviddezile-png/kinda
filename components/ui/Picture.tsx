@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { imageFor, imageAlternatesFor } from "@/lib/wordImages"
 import { cn } from "@/lib/utils"
 
@@ -27,12 +27,9 @@ interface PictureProps {
 // than substituting an emoji or icon — the product only shows real pictures.
 export function Picture({ src, alt, className }: PictureProps) {
   const candidates = [src, imageFor(alt), ...imageAlternatesFor(alt)].filter(Boolean) as string[]
-  const [idx, setIdx] = useState(0)
-
-  // Restart the candidate walk whenever the picture changes.
-  useEffect(() => {
-    setIdx(0)
-  }, [src, alt])
+  const candidateKey = candidates.join("|")
+  const [fallback, setFallback] = useState({ key: candidateKey, idx: 0 })
+  const idx = fallback.key === candidateKey ? fallback.idx : 0
 
   const current = candidates[idx]
 
@@ -43,6 +40,16 @@ export function Picture({ src, alt, className }: PictureProps) {
 
   return (
     // eslint-disable-next-line @next/next/no-img-element
-    <img src={current} alt={alt} onError={() => setIdx((i) => i + 1)} className={className} />
+    <img
+      src={current}
+      alt={alt}
+      onError={() =>
+        setFallback((state) => ({
+          key: candidateKey,
+          idx: state.key === candidateKey ? state.idx + 1 : 1,
+        }))
+      }
+      className={className}
+    />
   )
 }

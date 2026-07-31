@@ -15,36 +15,36 @@ interface FloatingLetter {
   isCorrect: boolean
   x: number
   y: number
+  duration: number
 }
 
 const ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
+const spawn = (target: string, correct: boolean, key: string): FloatingLetter => ({
+  id: key,
+  letter: correct ? target : "",
+  isCorrect: correct,
+  x: Math.random() * 80 + 5,
+  y: Math.random() * 65 + 12,
+  duration: 1.6 + Math.random(),
+})
+
+const makeLetters = (target: string): FloatingLetter[] => {
+  const others = ALPHABET.replace(target, "").split("")
+  const correct = Array.from({ length: 3 }, (_, i) => spawn(target, true, `c-${i}`))
+  const wrong = shuffle(others)
+    .slice(0, 12)
+    .map((l, i) => ({ ...spawn(target, false, `w-${i}`), letter: l }))
+  return shuffle([...correct, ...wrong])
+}
+
 export function TapLetter({ letterData, onReward, onComplete }: GameProps) {
   const t = getPhrases(useLanguage((s) => s.lang))
   const target = letterData.letter.toUpperCase()
-  const [letters, setLetters] = useState<FloatingLetter[]>([])
+  const [letters, setLetters] = useState<FloatingLetter[]>(() => makeLetters(target))
   const [score, setScore] = useState(0)
   const [time, setTime] = useState(30)
   const ended = useRef(false)
-
-  const spawn = (correct: boolean, key: string): FloatingLetter => ({
-    id: key,
-    letter: correct ? target : "",
-    isCorrect: correct,
-    x: Math.random() * 80 + 5,
-    y: Math.random() * 65 + 12,
-  })
-
-  useEffect(() => {
-    const others = ALPHABET.replace(target, "").split("")
-    const correct = Array.from({ length: 3 }, (_, i) => spawn(true, `c-${i}`))
-    const wrong = shuffle(others)
-      .slice(0, 12)
-      .map((l, i) => ({ ...spawn(false, `w-${i}`), letter: l }))
-    setLetters(shuffle([...correct, ...wrong]))
-    // target is stable for the game's lifetime
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [target])
 
   useEffect(() => {
     const t = setInterval(() => setTime((s) => s - 1), 1000)
@@ -67,7 +67,7 @@ export function TapLetter({ letterData, onReward, onComplete }: GameProps) {
       onReward()
       setLetters((prev) => [
         ...prev.filter((l) => l.id !== fl.id),
-        { ...spawn(true, `c-${Math.random()}`) },
+        { ...spawn(target, true, `c-${Date.now()}`) },
       ])
     } else {
       playSound("/audio/feedback/wrong-soft.mp3")
@@ -88,7 +88,7 @@ export function TapLetter({ letterData, onReward, onComplete }: GameProps) {
           type="button"
           onClick={() => tap(fl)}
           animate={{ y: [0, -8, 0] }}
-          transition={{ duration: 1.6 + Math.random(), repeat: Infinity, ease: "easeInOut" }}
+          transition={{ duration: fl.duration, repeat: Infinity, ease: "easeInOut" }}
           className="absolute text-5xl font-black"
           style={{ left: `${fl.x}%`, top: `${fl.y}%`, color: fl.isCorrect ? letterData.color : "#9CA3AF" }}
         >

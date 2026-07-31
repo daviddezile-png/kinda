@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useMemo, useState } from "react"
+import { useMemo, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { shuffle } from "@/lib/utils"
 import { playSound } from "@/lib/playSound"
@@ -20,8 +20,9 @@ export function BuildWord({ letterData, onReward, onComplete }: GameProps) {
   const words = letterData.games.build_word.words
   const [wi, setWi] = useState(0)
   const word = words[wi]
-  const [filled, setFilled] = useState<string[]>([])
-  const [used, setUsed] = useState<string[]>([])
+  const [answer, setAnswer] = useState({ wi, filled: [] as string[], used: [] as string[] })
+  const filled = answer.wi === wi ? answer.filled : []
+  const used = answer.wi === wi ? answer.used : []
   const [wrong, setWrong] = useState<string | null>(null)
 
   const tiles = useMemo<Tile[]>(() => {
@@ -30,18 +31,12 @@ export function BuildWord({ letterData, onReward, onComplete }: GameProps) {
     return shuffle([...wordTiles, ...extras])
   }, [word])
 
-  useEffect(() => {
-    setFilled([])
-    setUsed([])
-  }, [wi])
-
   const tap = (tile: Tile) => {
     if (used.includes(tile.id)) return
     const expected = word.word[filled.length]
     if (tile.letter === expected) {
       const f = [...filled, tile.letter]
-      setFilled(f)
-      setUsed((u) => [...u, tile.id])
+      setAnswer({ wi, filled: f, used: [...used, tile.id] })
       playSound("/audio/games/pop.mp3")
       if (f.length === word.word.length) {
         // onReward (GameSelector) cheers and names the gift — no praise here.

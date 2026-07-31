@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useSyncExternalStore } from "react"
 import { motion } from "framer-motion"
 import { Volume2, VolumeX } from "lucide-react"
 import { isMuted, toggleMuted, onMuteChange } from "@/lib/audio"
@@ -9,13 +9,7 @@ import { isMuted, toggleMuted, onMuteChange } from "@/lib/audio"
 // sound on/off toggle — a real control (not decoration), still icon-only
 // since a pre-reading child can't read "mute"/"unmute" text.
 export function MuteToggle({ className }: { className?: string }) {
-  const [muted, setMutedState] = useState(false)
-
-  // Read the persisted flag after mount (avoids a server/client mismatch).
-  useEffect(() => {
-    setMutedState(isMuted())
-    return onMuteChange(setMutedState)
-  }, [])
+  const muted = useSyncExternalStore(onMuteChange, isMuted, () => false)
 
   return (
     <motion.button

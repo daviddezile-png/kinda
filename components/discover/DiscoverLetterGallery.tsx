@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable react-hooks/preserve-manual-memoization, react-hooks/set-state-in-effect */
+
 import { useCallback, useEffect, useRef, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ImageCard, type CardState } from "@/components/games/ImageCard"
